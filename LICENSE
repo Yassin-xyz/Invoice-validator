@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Cette licence MIT couvre le code source de l'extension « Facture Schematron
-Validator ». Elle NE s'applique PAS aux artefacts de validation tiers embarqués
-dans le dépôt, qui restent régis par leurs licences respectives. Voir le fichier
-NOTICE.md pour le détail des composants tiers et de leurs licences.
