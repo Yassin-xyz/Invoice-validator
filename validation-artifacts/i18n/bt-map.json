@@ -1,0 +1,2877 @@
+{
+ "BT-1": {
+  "label": "Numéro de facture",
+  "ubl": "cbc:ID",
+  "cii": "rsm:ExchangedDocument/ram:ID"
+ },
+ "BT-2": {
+  "label": "Date d'émission",
+  "ubl": "cbc:IssueDate",
+  "cii": "rsm:ExchangedDocument/ram:IssueDateTime/udt:DateTimeString"
+ },
+ "BT-3": {
+  "label": "Code de type de facture",
+  "ubl": "cbc:InvoiceTypeCode",
+  "cii": "rsm:ExchangedDocument/ram:TypeCode"
+ },
+ "BT-5": {
+  "label": "Devise de la facture",
+  "ubl": "cbc:DocumentCurrencyCode",
+  "cii": "ram:InvoiceCurrencyCode"
+ },
+ "BT-6": {
+  "label": "Devise de comptabilisation de la TVA",
+  "ubl": "cbc:TaxCurrencyCode",
+  "cii": "ram:TaxCurrencyCode"
+ },
+ "BT-7": {
+  "label": "Date d'exigibilité de la TVA",
+  "ubl": "cbc:TaxPointDate",
+  "cii": "ram:ApplicableTradeTax/ram:TaxPointDate"
+ },
+ "BT-8": {
+  "label": "Code de date d'exigibilité de la TVA",
+  "ubl": "cac:InvoicePeriod/cbc:DescriptionCode",
+  "cii": "ram:ApplicableTradeTax/ram:DueDateTypeCode"
+ },
+ "BT-9": {
+  "label": "Date d'échéance",
+  "ubl": "cbc:DueDate",
+  "cii": "ram:SpecifiedTradePaymentTerms/ram:DueDateDateTime/udt:DateTimeString"
+ },
+ "BT-10": {
+  "label": "Référence acheteur",
+  "ubl": "cbc:BuyerReference",
+  "cii": "ram:BuyerReference"
+ },
+ "BT-12": {
+  "label": "Référence de contrat",
+  "ubl": "cac:ContractDocumentReference/cbc:ID",
+  "cii": "ram:ContractReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-13": {
+  "label": "Référence de bon de commande",
+  "ubl": "cac:OrderReference/cbc:ID",
+  "cii": "ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-20": {
+  "label": "Conditions de paiement",
+  "ubl": "cac:PaymentTerms/cbc:Note",
+  "cii": "ram:SpecifiedTradePaymentTerms/ram:Description"
+ },
+ "BT-22": {
+  "label": "Note de facture",
+  "ubl": "cbc:Note",
+  "cii": "rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-23": {
+  "label": "Processus métier (cadre de facturation)",
+  "ubl": "cbc:ProfileID",
+  "cii": "ram:BusinessProcessSpecifiedDocumentContextParameter/ram:ID",
+  "bg": "BG-2"
+ },
+ "BT-24": {
+  "label": "Identifiant de spécification",
+  "ubl": "cbc:CustomizationID",
+  "cii": "ram:GuidelineSpecifiedDocumentContextParameter/ram:ID",
+  "bg": "BG-2"
+ },
+ "BT-25": {
+  "label": "Numéro de facture antérieure",
+  "ubl": "cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID",
+  "cii": "ram:InvoiceReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-3"
+ },
+ "BT-27": {
+  "label": "Nom du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "ram:SellerTradeParty/ram:Name",
+  "bg": "BG-4"
+ },
+ "BT-29": {
+  "label": "Identifiant du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "ram:SellerTradeParty/ram:ID",
+  "bg": "BG-4"
+ },
+ "BT-30": {
+  "label": "Identifiant d'enregistrement légal du vendeur (SIREN)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "ram:SellerTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-4"
+ },
+ "BT-31": {
+  "label": "Identifiant TVA du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "ram:SellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-4"
+ },
+ "BT-32": {
+  "label": "Identifiant fiscal du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "ram:SellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-4"
+ },
+ "BT-34": {
+  "label": "Adresse électronique du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cbc:EndpointID",
+  "cii": "ram:SellerTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-4"
+ },
+ "BT-38": {
+  "label": "Code postal du vendeur",
+  "ubl": "cac:PostalAddress/cbc:PostalZone",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-5"
+ },
+ "BT-40": {
+  "label": "Code pays du vendeur",
+  "ubl": "cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-5"
+ },
+ "BT-44": {
+  "label": "Nom de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "ram:BuyerTradeParty/ram:Name",
+  "bg": "BG-7"
+ },
+ "BT-46": {
+  "label": "Identifiant de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "ram:BuyerTradeParty/ram:ID",
+  "bg": "BG-7"
+ },
+ "BT-47": {
+  "label": "Identifiant d'enregistrement légal de l'acheteur (SIREN)",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "ram:BuyerTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-7"
+ },
+ "BT-48": {
+  "label": "Identifiant TVA de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "ram:BuyerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-7"
+ },
+ "BT-49": {
+  "label": "Adresse électronique de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cbc:EndpointID",
+  "cii": "ram:BuyerTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-7"
+ },
+ "BT-55": {
+  "label": "Code pays de l'acheteur",
+  "ubl": "cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "ram:BuyerTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-8"
+ },
+ "BT-59": {
+  "label": "Nom du bénéficiaire",
+  "ubl": "cac:PayeeParty/cac:PartyName/cbc:Name",
+  "cii": "ram:PayeeTradeParty/ram:Name",
+  "bg": "BG-10"
+ },
+ "BT-62": {
+  "label": "Nom du représentant fiscal",
+  "ubl": "cac:TaxRepresentativeParty/cac:PartyName/cbc:Name",
+  "cii": "ram:SellerTaxRepresentativeTradeParty/ram:Name",
+  "bg": "BG-11"
+ },
+ "BT-63": {
+  "label": "Identifiant TVA du représentant fiscal",
+  "ubl": "cac:TaxRepresentativeParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "ram:SellerTaxRepresentativeTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-11"
+ },
+ "BT-69": {
+  "label": "Code pays du représentant fiscal",
+  "ubl": "cac:TaxRepresentativeParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-12"
+ },
+ "BT-72": {
+  "label": "Date de livraison effective",
+  "ubl": "cac:Delivery/cbc:ActualDeliveryDate",
+  "cii": "ram:ActualDeliverySupplyChainEvent/ram:OccurrenceDateTime/udt:DateTimeString",
+  "bg": "BG-13"
+ },
+ "BT-73": {
+  "label": "Début de période de facturation",
+  "ubl": "cac:InvoicePeriod/cbc:StartDate",
+  "cii": "ram:BillingSpecifiedPeriod/ram:StartDateTime/udt:DateTimeString",
+  "bg": "BG-14"
+ },
+ "BT-74": {
+  "label": "Fin de période de facturation",
+  "ubl": "cac:InvoicePeriod/cbc:EndDate",
+  "cii": "ram:BillingSpecifiedPeriod/ram:EndDateTime/udt:DateTimeString",
+  "bg": "BG-14"
+ },
+ "BT-80": {
+  "label": "Code pays de livraison",
+  "ubl": "cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode",
+  "cii": "ram:ShipToTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-15"
+ },
+ "BT-81": {
+  "label": "Code de type de moyen de paiement",
+  "ubl": "cac:PaymentMeans/cbc:PaymentMeansCode",
+  "cii": "ram:SpecifiedTradeSettlementPaymentMeans/ram:TypeCode",
+  "bg": "BG-16"
+ },
+ "BT-83": {
+  "label": "Référence de paiement",
+  "ubl": "cac:PaymentMeans/cbc:PaymentID",
+  "cii": "ram:PaymentReference",
+  "bg": "BG-16"
+ },
+ "BT-84": {
+  "label": "Identifiant du compte de paiement (IBAN)",
+  "ubl": "cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID",
+  "cii": "ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeePartyCreditorFinancialAccount/ram:IBANID",
+  "bg": "BG-17"
+ },
+ "BT-87": {
+  "label": "Numéro de carte de paiement (masqué)",
+  "ubl": "cac:PaymentMeans/cac:CardAccount/cbc:PrimaryAccountNumberID",
+  "cii": "ram:ApplicableTradeSettlementFinancialCard/ram:ID",
+  "bg": "BG-18"
+ },
+ "BT-92": {
+  "label": "Montant de la remise (document)",
+  "ubl": "cac:AllowanceCharge/cbc:Amount",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ActualAmount",
+  "bg": "BG-20"
+ },
+ "BT-95": {
+  "label": "Catégorie de TVA de la remise (document)",
+  "ubl": "cac:AllowanceCharge/cac:TaxCategory/cbc:ID",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:CategoryCode",
+  "bg": "BG-20"
+ },
+ "BT-97": {
+  "label": "Motif de la remise (document)",
+  "ubl": "cac:AllowanceCharge/cbc:AllowanceChargeReason",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:Reason",
+  "bg": "BG-20"
+ },
+ "BT-98": {
+  "label": "Code de motif de la remise (document)",
+  "ubl": "cac:AllowanceCharge/cbc:AllowanceChargeReasonCode",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ReasonCode",
+  "bg": "BG-20"
+ },
+ "BT-99": {
+  "label": "Montant des frais (document)",
+  "ubl": "cac:AllowanceCharge/cbc:Amount",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ActualAmount",
+  "bg": "BG-21"
+ },
+ "BT-102": {
+  "label": "Catégorie de TVA des frais (document)",
+  "ubl": "cac:AllowanceCharge/cac:TaxCategory/cbc:ID",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:CategoryCode",
+  "bg": "BG-21"
+ },
+ "BT-104": {
+  "label": "Motif des frais (document)",
+  "ubl": "cac:AllowanceCharge/cbc:AllowanceChargeReason",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:Reason",
+  "bg": "BG-21"
+ },
+ "BT-105": {
+  "label": "Code de motif des frais (document)",
+  "ubl": "cac:AllowanceCharge/cbc:AllowanceChargeReasonCode",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ReasonCode",
+  "bg": "BG-21"
+ },
+ "BT-106": {
+  "label": "Somme des montants nets des lignes",
+  "ubl": "cac:LegalMonetaryTotal/cbc:LineExtensionAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:LineTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-107": {
+  "label": "Somme des remises (document)",
+  "ubl": "cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:AllowanceTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-108": {
+  "label": "Somme des frais (document)",
+  "ubl": "cac:LegalMonetaryTotal/cbc:ChargeTotalAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:ChargeTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-109": {
+  "label": "Montant total hors TVA",
+  "ubl": "cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:TaxBasisTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-110": {
+  "label": "Montant total de TVA",
+  "ubl": "cac:TaxTotal/cbc:TaxAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:TaxTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-111": {
+  "label": "Montant total de TVA en devise de comptabilisation",
+  "ubl": "cac:TaxTotal/cbc:TaxAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:TaxTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-112": {
+  "label": "Montant total TTC",
+  "ubl": "cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:GrandTotalAmount",
+  "bg": "BG-22"
+ },
+ "BT-113": {
+  "label": "Montant payé",
+  "ubl": "cac:LegalMonetaryTotal/cbc:PrepaidAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:TotalPrepaidAmount",
+  "bg": "BG-22"
+ },
+ "BT-114": {
+  "label": "Montant d'arrondi",
+  "ubl": "cac:LegalMonetaryTotal/cbc:PayableRoundingAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:RoundingAmount",
+  "bg": "BG-22"
+ },
+ "BT-115": {
+  "label": "Montant à payer",
+  "ubl": "cac:LegalMonetaryTotal/cbc:PayableAmount",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:DuePayableAmount",
+  "bg": "BG-22"
+ },
+ "BT-116": {
+  "label": "Assiette de TVA par catégorie",
+  "ubl": "cac:TaxTotal/cac:TaxSubtotal/cbc:TaxableAmount",
+  "cii": "ram:ApplicableTradeTax/ram:BasisAmount",
+  "bg": "BG-23"
+ },
+ "BT-117": {
+  "label": "Montant de TVA par catégorie",
+  "ubl": "cac:TaxTotal/cac:TaxSubtotal/cbc:TaxAmount",
+  "cii": "ram:ApplicableTradeTax/ram:CalculatedAmount",
+  "bg": "BG-23"
+ },
+ "BT-118": {
+  "label": "Code de catégorie de TVA",
+  "ubl": "cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:ID",
+  "cii": "ram:ApplicableTradeTax/ram:CategoryCode",
+  "bg": "BG-23"
+ },
+ "BT-119": {
+  "label": "Taux de TVA par catégorie",
+  "ubl": "cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:Percent",
+  "cii": "ram:ApplicableTradeTax/ram:RateApplicablePercent",
+  "bg": "BG-23"
+ },
+ "BT-120": {
+  "label": "Motif d'exonération de TVA",
+  "ubl": "cac:TaxCategory/cbc:TaxExemptionReason",
+  "cii": "ram:ApplicableTradeTax/ram:ExemptionReason",
+  "bg": "BG-23"
+ },
+ "BT-121": {
+  "label": "Code de motif d'exonération de TVA",
+  "ubl": "cac:TaxCategory/cbc:TaxExemptionReasonCode",
+  "cii": "ram:ApplicableTradeTax/ram:ExemptionReasonCode",
+  "bg": "BG-23"
+ },
+ "BT-122": {
+  "label": "Référence de pièce justificative",
+  "ubl": "cac:AdditionalDocumentReference/cbc:ID",
+  "cii": "ram:AdditionalReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-24"
+ },
+ "BT-125": {
+  "label": "Pièce jointe",
+  "ubl": "cac:Attachment/cbc:EmbeddedDocumentBinaryObject",
+  "cii": "ram:AdditionalReferencedDocument/ram:AttachmentBinaryObject",
+  "bg": "BG-24"
+ },
+ "BT-126": {
+  "label": "Identifiant de ligne de facture",
+  "ubl": "cac:InvoiceLine/cbc:ID",
+  "cii": "ram:AssociatedDocumentLineDocument/ram:LineID",
+  "bg": "BG-25"
+ },
+ "BT-129": {
+  "label": "Quantité facturée",
+  "ubl": "cac:InvoiceLine/cbc:InvoicedQuantity",
+  "cii": "ram:SpecifiedLineTradeDelivery/ram:BilledQuantity",
+  "bg": "BG-25"
+ },
+ "BT-130": {
+  "label": "Unité de la quantité facturée",
+  "ubl": "cbc:InvoicedQuantity/@unitCode",
+  "cii": "ram:BilledQuantity/@unitCode",
+  "bg": "BG-25"
+ },
+ "BT-131": {
+  "label": "Montant net de la ligne",
+  "ubl": "cac:InvoiceLine/cbc:LineExtensionAmount",
+  "cii": "ram:SpecifiedTradeSettlementLineMonetarySummation/ram:LineTotalAmount",
+  "bg": "BG-25"
+ },
+ "BT-134": {
+  "label": "Début de période de ligne",
+  "ubl": "cac:InvoiceLine/cac:InvoicePeriod/cbc:StartDate",
+  "cii": "ram:BillingSpecifiedPeriod/ram:StartDateTime/udt:DateTimeString",
+  "bg": "BG-26"
+ },
+ "BT-135": {
+  "label": "Fin de période de ligne",
+  "ubl": "cac:InvoiceLine/cac:InvoicePeriod/cbc:EndDate",
+  "cii": "ram:BillingSpecifiedPeriod/ram:EndDateTime/udt:DateTimeString",
+  "bg": "BG-26"
+ },
+ "BT-136": {
+  "label": "Montant de la remise de ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge/cbc:Amount",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ActualAmount",
+  "bg": "BG-27"
+ },
+ "BT-139": {
+  "label": "Motif de la remise de ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReason",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:Reason",
+  "bg": "BG-27"
+ },
+ "BT-140": {
+  "label": "Code de motif de la remise de ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReasonCode",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ReasonCode",
+  "bg": "BG-27"
+ },
+ "BT-141": {
+  "label": "Montant des frais de ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge/cbc:Amount",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ActualAmount",
+  "bg": "BG-28"
+ },
+ "BT-144": {
+  "label": "Motif des frais de ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReason",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:Reason",
+  "bg": "BG-28"
+ },
+ "BT-145": {
+  "label": "Code de motif des frais de ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReasonCode",
+  "cii": "ram:SpecifiedTradeAllowanceCharge/ram:ReasonCode",
+  "bg": "BG-28"
+ },
+ "BT-146": {
+  "label": "Prix net de l'article",
+  "ubl": "cac:Price/cbc:PriceAmount",
+  "cii": "ram:NetPriceProductTradePrice/ram:ChargeAmount",
+  "bg": "BG-29"
+ },
+ "BT-148": {
+  "label": "Prix brut de l'article",
+  "ubl": "cac:Price/cac:AllowanceCharge/cbc:BaseAmount",
+  "cii": "ram:GrossPriceProductTradePrice/ram:ChargeAmount",
+  "bg": "BG-29"
+ },
+ "BT-151": {
+  "label": "Code de catégorie de TVA de la ligne",
+  "ubl": "cac:Item/cac:ClassifiedTaxCategory/cbc:ID",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:CategoryCode",
+  "bg": "BG-30"
+ },
+ "BT-152": {
+  "label": "Taux de TVA de la ligne",
+  "ubl": "cac:Item/cac:ClassifiedTaxCategory/cbc:Percent",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:RateApplicablePercent",
+  "bg": "BG-30"
+ },
+ "BT-153": {
+  "label": "Nom de l'article",
+  "ubl": "cac:Item/cbc:Name",
+  "cii": "ram:SpecifiedTradeProduct/ram:Name",
+  "bg": "BG-31"
+ },
+ "BT-154": {
+  "label": "Description de l'article",
+  "ubl": "cac:Item/cbc:Description",
+  "cii": "ram:SpecifiedTradeProduct/ram:Description",
+  "bg": "BG-31"
+ },
+ "BT-155": {
+  "label": "Référence article du vendeur",
+  "ubl": "cac:Item/cac:SellersItemIdentification/cbc:ID",
+  "cii": "ram:SpecifiedTradeProduct/ram:SellerAssignedID",
+  "bg": "BG-31"
+ },
+ "BT-157": {
+  "label": "Identifiant standard de l'article",
+  "ubl": "cac:Item/cac:StandardItemIdentification/cbc:ID",
+  "cii": "ram:SpecifiedTradeProduct/ram:GlobalID",
+  "bg": "BG-31"
+ },
+ "BT-158": {
+  "label": "Identifiant de classification de l'article",
+  "ubl": "cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode",
+  "cii": "ram:DesignatedProductClassification/ram:ClassCode",
+  "bg": "BG-31"
+ },
+ "BT-159": {
+  "label": "Code pays d'origine de l'article",
+  "ubl": "cac:Item/cac:OriginCountry/cbc:IdentificationCode",
+  "cii": "ram:SpecifiedTradeProduct/ram:OriginTradeCountry/ram:ID",
+  "bg": "BG-31"
+ },
+ "BT-160": {
+  "label": "Nom d'attribut d'article",
+  "ubl": "cac:Item/cac:AdditionalItemProperty/cbc:Name",
+  "cii": "ram:ApplicableProductCharacteristic/ram:Description",
+  "bg": "BG-32"
+ },
+ "BT-161": {
+  "label": "Valeur d'attribut d'article",
+  "ubl": "cac:Item/cac:AdditionalItemProperty/cbc:Value",
+  "cii": "ram:ApplicableProductCharacteristic/ram:Value",
+  "bg": "BG-32"
+ },
+ "BG-1": {
+  "label": "Note de facture (groupe)",
+  "ubl": "",
+  "cii": "",
+  "bg": "BG-1"
+ },
+ "BG-2": {
+  "label": "Contrôle de processus",
+  "ubl": "",
+  "cii": "rsm:ExchangedDocumentContext",
+  "bg": "BG-2"
+ },
+ "BG-3": {
+  "label": "Référence à une facture antérieure",
+  "ubl": "cac:BillingReference/cac:InvoiceDocumentReference",
+  "cii": "ram:InvoiceReferencedDocument",
+  "bg": "BG-3"
+ },
+ "BG-4": {
+  "label": "Vendeur",
+  "ubl": "cac:AccountingSupplierParty",
+  "cii": "ram:SellerTradeParty",
+  "bg": "BG-4"
+ },
+ "BG-5": {
+  "label": "Adresse postale du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PostalAddress",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-5"
+ },
+ "BG-6": {
+  "label": "Contact du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:Contact",
+  "cii": "ram:SellerTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-6"
+ },
+ "BG-7": {
+  "label": "Acheteur",
+  "ubl": "cac:AccountingCustomerParty",
+  "cii": "ram:BuyerTradeParty",
+  "bg": "BG-7"
+ },
+ "BG-8": {
+  "label": "Adresse postale de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PostalAddress",
+  "cii": "ram:BuyerTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-8"
+ },
+ "BG-9": {
+  "label": "Contact de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:Contact",
+  "cii": "ram:BuyerTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-9"
+ },
+ "BG-10": {
+  "label": "Bénéficiaire",
+  "ubl": "cac:PayeeParty",
+  "cii": "ram:PayeeTradeParty",
+  "bg": "BG-10"
+ },
+ "BG-11": {
+  "label": "Représentant fiscal du vendeur",
+  "ubl": "cac:TaxRepresentativeParty",
+  "cii": "ram:SellerTaxRepresentativeTradeParty",
+  "bg": "BG-11"
+ },
+ "BG-12": {
+  "label": "Adresse postale du représentant fiscal",
+  "ubl": "cac:TaxRepresentativeParty/cac:PostalAddress",
+  "cii": "ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-12"
+ },
+ "BG-13": {
+  "label": "Informations de livraison",
+  "ubl": "cac:Delivery",
+  "cii": "ram:ApplicableHeaderTradeDelivery",
+  "bg": "BG-13"
+ },
+ "BG-14": {
+  "label": "Période de facturation",
+  "ubl": "cac:InvoicePeriod",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:BillingSpecifiedPeriod",
+  "bg": "BG-14"
+ },
+ "BG-15": {
+  "label": "Adresse de livraison",
+  "ubl": "cac:Delivery/cac:DeliveryLocation/cac:Address",
+  "cii": "ram:ShipToTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-15"
+ },
+ "BG-16": {
+  "label": "Instructions de paiement",
+  "ubl": "cac:PaymentMeans",
+  "cii": "ram:SpecifiedTradeSettlementPaymentMeans",
+  "bg": "BG-16"
+ },
+ "BG-17": {
+  "label": "Virement (compte bénéficiaire)",
+  "ubl": "cac:PaymentMeans/cac:PayeeFinancialAccount",
+  "cii": "ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeePartyCreditorFinancialAccount",
+  "bg": "BG-17"
+ },
+ "BG-18": {
+  "label": "Carte de paiement",
+  "ubl": "cac:PaymentMeans/cac:CardAccount",
+  "cii": "ram:SpecifiedTradeSettlementPaymentMeans/ram:ApplicableTradeSettlementFinancialCard",
+  "bg": "BG-18"
+ },
+ "BG-19": {
+  "label": "Prélèvement (mandat)",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradePaymentTerms",
+  "bg": "BG-19"
+ },
+ "BG-20": {
+  "label": "Remises au niveau du document",
+  "ubl": "cac:AllowanceCharge",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge",
+  "bg": "BG-20"
+ },
+ "BG-21": {
+  "label": "Frais au niveau du document",
+  "ubl": "cac:AllowanceCharge",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge",
+  "bg": "BG-21"
+ },
+ "BG-22": {
+  "label": "Totaux du document",
+  "ubl": "cac:LegalMonetaryTotal",
+  "cii": "ram:SpecifiedTradeSettlementHeaderMonetarySummation",
+  "bg": "BG-22"
+ },
+ "BG-23": {
+  "label": "Ventilation de la TVA",
+  "ubl": "cac:TaxTotal/cac:TaxSubtotal",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:ApplicableTradeTax",
+  "bg": "BG-23"
+ },
+ "BG-24": {
+  "label": "Pièce justificative complémentaire",
+  "ubl": "cac:AdditionalDocumentReference",
+  "cii": "ram:AdditionalReferencedDocument",
+  "bg": "BG-24"
+ },
+ "BG-25": {
+  "label": "Ligne de facture",
+  "ubl": "cac:InvoiceLine",
+  "cii": "ram:IncludedSupplyChainTradeLineItem",
+  "bg": "BG-25"
+ },
+ "BG-26": {
+  "label": "Période de la ligne",
+  "ubl": "cac:InvoiceLine/cac:InvoicePeriod",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:BillingSpecifiedPeriod",
+  "bg": "BG-26"
+ },
+ "BG-27": {
+  "label": "Remises de la ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeAllowanceCharge",
+  "bg": "BG-27"
+ },
+ "BG-28": {
+  "label": "Frais de la ligne",
+  "ubl": "cac:InvoiceLine/cac:AllowanceCharge",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeAllowanceCharge",
+  "bg": "BG-28"
+ },
+ "BG-29": {
+  "label": "Détail du prix",
+  "ubl": "cac:Price",
+  "cii": "ram:SpecifiedLineTradeAgreement/ram:NetPriceProductTradePrice",
+  "bg": "BG-29"
+ },
+ "BG-30": {
+  "label": "Informations de TVA de la ligne",
+  "ubl": "cac:Item/cac:ClassifiedTaxCategory",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax",
+  "bg": "BG-30"
+ },
+ "BG-31": {
+  "label": "Informations sur l'article",
+  "ubl": "cac:Item",
+  "cii": "ram:SpecifiedTradeProduct",
+  "bg": "BG-31"
+ },
+ "BG-32": {
+  "label": "Attributs de l'article",
+  "ubl": "cac:Item/cac:AdditionalItemProperty",
+  "cii": "ram:SpecifiedTradeProduct/ram:ApplicableProductCharacteristic",
+  "bg": "BG-32"
+ },
+ "BT-28": {
+  "label": "Nom commercial du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyName/cbc:Name",
+  "cii": "ram:SellerTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-4"
+ },
+ "BT-35": {
+  "label": "Adresse du vendeur — ligne 1",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-5"
+ },
+ "BT-36": {
+  "label": "Adresse du vendeur — ligne 2",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-5"
+ },
+ "BT-37": {
+  "label": "Ville du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-5"
+ },
+ "BT-39": {
+  "label": "Subdivision pays du vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "ram:SellerTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-5"
+ },
+ "BT-41": {
+  "label": "Contact du vendeur — nom",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:Contact/cbc:Name",
+  "cii": "ram:SellerTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-6"
+ },
+ "BT-42": {
+  "label": "Contact du vendeur — téléphone",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:Contact/cbc:Telephone",
+  "cii": "ram:SellerTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-6"
+ },
+ "BT-43": {
+  "label": "Contact du vendeur — courriel",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:Contact/cbc:ElectronicMail",
+  "cii": "ram:SellerTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-6"
+ },
+ "BT-45": {
+  "label": "Nom commercial de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyName/cbc:Name",
+  "cii": "ram:BuyerTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-7"
+ },
+ "BT-50": {
+  "label": "Adresse de l'acheteur — ligne 1",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:StreetName",
+  "cii": "ram:BuyerTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-8"
+ },
+ "BT-51": {
+  "label": "Adresse de l'acheteur — ligne 2",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "ram:BuyerTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-8"
+ },
+ "BT-52": {
+  "label": "Ville de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:CityName",
+  "cii": "ram:BuyerTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-8"
+ },
+ "BT-53": {
+  "label": "Code postal de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:PostalZone",
+  "cii": "ram:BuyerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-8"
+ },
+ "BT-56": {
+  "label": "Contact de l'acheteur — nom",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:Contact/cbc:Name",
+  "cii": "ram:BuyerTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-9"
+ },
+ "BT-57": {
+  "label": "Contact de l'acheteur — téléphone",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:Contact/cbc:Telephone",
+  "cii": "ram:BuyerTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-9"
+ },
+ "BT-58": {
+  "label": "Contact de l'acheteur — courriel",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:Contact/cbc:ElectronicMail",
+  "cii": "ram:BuyerTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-9"
+ },
+ "BT-70": {
+  "label": "Nom du destinataire de la livraison",
+  "ubl": "cac:Delivery/cac:DeliveryParty/cac:PartyName/cbc:Name",
+  "cii": "ram:ShipToTradeParty/ram:Name",
+  "bg": "BG-13"
+ },
+ "BT-132": {
+  "label": "Référence de ligne de commande",
+  "ubl": "cac:InvoiceLine/cac:OrderLineReference/cbc:LineID",
+  "cii": "ram:BuyerOrderReferencedDocument/ram:LineID",
+  "bg": "BG-25"
+ },
+ "BT-133": {
+  "label": "Référence comptable de la ligne",
+  "ubl": "cac:InvoiceLine/cbc:AccountingCost",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:ReceivableSpecifiedTradeAccountingAccount/ram:ID",
+  "bg": "BG-25"
+ },
+ "BT-19": {
+  "label": "Référence comptable de l'acheteur",
+  "ubl": "cbc:AccountingCost",
+  "cii": "ram:ReceivableSpecifiedTradeAccountingAccount/ram:ID"
+ },
+ "EXT-FR-FE-159": {
+  "label": "Code d'attribut d'article",
+  "ubl": "cac:Item/cac:AdditionalItemProperty/cbc:NameCode",
+  "cii": "ram:ApplicableProductCharacteristic/ram:TypeCode",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-160": {
+  "label": "Valeur-quantité d'attribut d'article",
+  "ubl": "cac:Item/cac:AdditionalItemProperty/cbc:ValueQuantity",
+  "cii": "ram:ApplicableProductCharacteristic/ram:ValueMeasure",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-161": {
+  "label": "Unité de la valeur-quantité d'attribut",
+  "ubl": "cac:AdditionalItemProperty/cbc:ValueQuantity/@unitCode",
+  "cii": "ram:ApplicableProductCharacteristic/ram:ValueMeasure/@unitCode",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-162": {
+  "label": "Identifiant de ligne parente (sous-ligne)",
+  "ubl": "cac:InvoiceLine/cac:BillingReference/cac:BillingReferenceLine/cbc:ID",
+  "cii": "ram:AssociatedDocumentLineDocument/ram:ParentLineID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-163": {
+  "label": "Sous-type de ligne de facture (statut)",
+  "ubl": "cac:InvoiceLine/cac:BillingReference/cac:InvoiceDocumentReference/cbc:DocumentStatusCode",
+  "cii": "ram:AssociatedDocumentLineDocument/ram:LineStatusReasonCode",
+  "bg": "BG-25"
+ },
+ "BT-2-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IssueDateTime/udt:DateTimeString/@format"
+ },
+ "BT-9-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradePaymentTerms/ram:DueDateDateTime/udt:DateTimeString/@format"
+ },
+ "BT-11": {
+  "label": "Référence de projet",
+  "ubl": "cac:AdditionalDocumentReference/cbc:ID (avec /CreditNote/cac:AdditionalDocumentReference/cbc:DocumentTypeCode='50')",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SpecifiedProcuringProject/ram:ID"
+ },
+ "EXT-FR-FE-01": {
+  "label": "Type de contrat",
+  "ubl": "Invoice/cac:ContractDocumentReference/cbc:DocumentType",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:ContractReferencedDocument/ram:ReferenceTypeCode"
+ },
+ "BT-14": {
+  "label": "Numéro d’ordre de vente",
+  "ubl": "Invoice/cac:OrderReference/cbc:SalesOrderID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerOrderReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-15": {
+  "label": "Référence d'avis de réception",
+  "ubl": "Invoice/cac:ReceiptDocumentReference/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ReceivingAdviceReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-16": {
+  "label": "Référence d'avis d'expédition",
+  "ubl": "Invoice/cac:DespatchDocumentReference/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:DespatchAdviceReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-17": {
+  "label": "Référence de l'appel d'offres ou du lot",
+  "ubl": "Invoice/cac:OriginatorDocumentReference/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-18": {
+  "label": "Identifiant d'objet facturé",
+  "ubl": "Invoice/cac:AdditionalDocumentReference/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:IssuerAssignedID"
+ },
+ "BT-18-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "Invoice/cac:AdditionalDocumentReference/cbc:ID/@schemeID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:ReferenceTypeCode"
+ },
+ "BT-21-REG": {
+  "label": "Code du sujet de la Mention légale du fournisseur (Valeur REG)",
+  "ubl": "Ex : <cbc:Note>#REG# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-BAR": {
+  "label": "Code du sujet de la mention indiquant le traitement attendu sur la facture (Valeur BAR)",
+  "ubl": "Ex : <cbc:Note>#BAR# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-ADN": {
+  "label": "Code du sujet de la mention indiquant le traitement attendu sur la facture (Valeur ADN)",
+  "ubl": "Ex : <cbc:Note>#BAR# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-AAB": {
+  "label": "Code du sujet de la Mention \"Escompte\" (valeur AAB)",
+  "ubl": "Ex : <cbc:Note>#AAB# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-PMT": {
+  "label": "Code du sujet de la Mention de l'indemnité forfaitaire pour frais de recouvrement\"40euros\"",
+  "ubl": "Ex : <cbc:Note>#PMT# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-PMD": {
+  "label": "Code du sujet de la Mention de pénalités (valeur PMD)",
+  "ubl": "Ex : <cbc:Note>#PMD# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-AAC": {
+  "label": "Code du sujet de la Clause de subrogation factoring (valeur AAC)",
+  "ubl": "Ex : <cbc:Note>#AAC# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-AAI": {
+  "label": "Code du sujet des informations générales (valeur AAI)",
+  "ubl": "Ex : <cbc:Note>#AAI# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-SUR": {
+  "label": "Code du sujet des remarques fournisseur (valeur SUR)",
+  "ubl": "Ex : <cbc:Note>#SUR# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-ABL": {
+  "label": "Code du sujet des informations légales (valeur ABL)",
+  "ubl": "Ex : <cbc:Note>#ABL# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-TXD": {
+  "label": "Code du sujet de la Mention \"Membre d'un assujeti unique\" (valeur TXD)",
+  "ubl": "Ex : <cbc:Note>#TXD# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-CUS": {
+  "label": "Code du sujet des informations douanières (valeur CUS)",
+  "ubl": "Ex : <cbc:Note>#CUS# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-BLU": {
+  "label": "Code du sujet Eco-participation, Ecotaxe ou autres (valeur BLU)",
+  "ubl": "Ex : <cbc:Note>#BLU# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-PAI": {
+  "label": "Code du sujet de la Mention \"Paiement total ou partiel de la facture par un tiers\"",
+  "ubl": "Ex : <cbc:Note>#PAI# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-21-ALL": {
+  "label": "Tous les codes sujets dans un objet complexe (sujet,contenu)",
+  "ubl": "Ex : <cbc:Note>#ALL# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-22-REG": {
+  "label": "Mention légale du fournisseur",
+  "ubl": "Ex : <cbc:Note>#REG# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-22-BAR": {
+  "label": "Mention indiquant le traitement attendu sur la facture",
+  "ubl": "Ex : <cbc:Note>#BAR# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-22-ADN": {
+  "label": "Mention indiquant si la facture relève du B2G en France (règles additionneles CPRO)",
+  "ubl": "Ex : <cbc:Note>#BAR# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-1"
+ },
+ "BT-22-AAB": {
+  "label": "Mention \"Escompte\"",
+  "ubl": "Ex : <cbc:Note>#AAB# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-PMT": {
+  "label": "Mention de l'indemnité forfaitaire pour frais de recouvrement\"40euros\"",
+  "ubl": "Ex : <cbc:Note>#PMT# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-PMD": {
+  "label": "Mention de pénalités",
+  "ubl": "Ex : <cbc:Note>#PMD# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-AAC": {
+  "label": "Clause de subrogation factoring",
+  "ubl": "Ex : <cbc:Note>#AAC# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-AAI": {
+  "label": "Informations générales",
+  "ubl": "Ex : <cbc:Note>#AAI# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-SUR": {
+  "label": "Remarques fournisseur",
+  "ubl": "Ex : <cbc:Note>#SUR# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-ABL": {
+  "label": "Informations légales",
+  "ubl": "Ex : <cbc:Note>#ABL# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-TXD": {
+  "label": "Mention \"Membre d’un assujetti unique\"",
+  "ubl": "Ex : <cbc:Note>#TXD# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-CUS": {
+  "label": "Informations douanières",
+  "ubl": "Ex : <cbc:Note>#CUS# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-BLU": {
+  "label": "Eco-participation, Ecotaxe ou autres",
+  "ubl": "Ex : <cbc:Note>#BLU# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-PAI": {
+  "label": "Paiement total ou partiel de la facture par un tiers",
+  "ubl": "Ex : <cbc:Note>#PAI# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-22-ALL": {
+  "label": "Tous les contenus de note dans un objet complexe (sujet,contenu)",
+  "ubl": "Ex : <cbc:Note>#ALL# + NoteDeFacture </cbc:Note>",
+  "cii": "rsm:CrossIndustryInvoice/rsm:ExchangedDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-1"
+ },
+ "BT-26": {
+  "label": "Date d'émission de la facture antérieure",
+  "ubl": "Invoice/cac:BillingReference/cac:InvoiceDocumentReference/cbc:IssueDate",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceReferencedDocument/ram:FormattedIssueDateTime/qdt:DateTimeString",
+  "bg": "BG-3"
+ },
+ "BT-26-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoiceReferencedDocument/ram:FormattedIssueDateTime/qdt:DateTimeString/@format",
+  "bg": "BG-3"
+ },
+ "EXT-FR-FE-02": {
+  "label": "Type de facture antérieure",
+  "ubl": "Invoice/cac:BillingReference/cac:InvoiceDocumentReference/cbc:DocumentTypeCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceReferencedDocument/ram:TypeCode",
+  "bg": "BG-3"
+ },
+ "BT-29-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-29b": {
+  "label": "Identifiant du vendeur (SIRET)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID",
+  "bg": "BG-4"
+ },
+ "BT-29b-1": {
+  "label": "Identifiant du schéma (SIRET)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-29c": {
+  "label": "Identifiant du vendeur (Code routage)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID",
+  "bg": "BG-4"
+ },
+ "BT-29c-1": {
+  "label": "Identifiant du schéma (Code routage)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-29d": {
+  "label": "Identifiant du vendeur (Assujetti unique)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID",
+  "bg": "BG-4"
+ },
+ "BT-29d-1": {
+  "label": "Identifiant du schéma (Assujetti unique)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-30-1": {
+  "label": "Identifiant du schéma SIREN",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-31-0": {
+  "label": "Qualifiant d'identification à la TVA du vendeur",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-32-0": {
+  "label": "Qualifiant d'Identifiant fiscal du Vendeur",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-33": {
+  "label": "Forme juridique et capital social pour les sociétés",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyLegalForm",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:Description",
+  "bg": "BG-4"
+ },
+ "BT-34-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-4"
+ },
+ "BT-162": {
+  "label": "Adresse du vendeur (Ligne 3)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-5"
+ },
+ "BT-46-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-7"
+ },
+ "BT-46b": {
+  "label": "SIRET Client (en cas de routage de la facture au niveau SIRET ou code Routage)",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:GlobalID",
+  "bg": "BG-7"
+ },
+ "BT-46b-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-7"
+ },
+ "BT-46c": {
+  "label": "Identifiant de l'acheteur (Code routage)",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:GlobalID",
+  "bg": "BG-7"
+ },
+ "BT-46c-1": {
+  "label": "Identifiant du schéma (Code routage)",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-7"
+ },
+ "BT-47-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-7"
+ },
+ "BT-48-0": {
+  "label": "Qualifiant d'identification fiscal de l'acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-7"
+ },
+ "BT-49-1": {
+  "label": "Identifiant du schéma de l'identifiant d'adressage",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-7"
+ },
+ "BT-163": {
+  "label": "Adresse de l'acheteur (Ligne 3)",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-8"
+ },
+ "BT-54": {
+  "label": "Subdivision du pays de l'acheteur",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-8"
+ },
+ "EXT-FR-FE-BG-01": {
+  "label": "AGENT D'ACHETEUR (Agence media, Tiers valideur coté Acheteur)",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:AgentParty",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-03": {
+  "label": "Nom / Raison sociale de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:Name",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-04": {
+  "label": "Code du rôle de l'Agent de l'Acheteur",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cbc:IndustryClassificationCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:RoleCode",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-05": {
+  "label": "Appellation commerciale de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PartyName/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-06": {
+  "label": "Identifiant complémentaire de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:GlobalID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-07": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:Party/cac:AgentParty/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-08": {
+  "label": "Numero de SIREN de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-09": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:Party/cac:AgentParty/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-10": {
+  "label": "Identifiant à la TVA de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-11": {
+  "label": "Identifiant du schéma fiscal de l'Agent de l'Acheteur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-12": {
+  "label": "Adresse électronique de l'Agent de l'Acheteur",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cbc:EndpointID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-13": {
+  "label": "Identifiant du schéma de l'adresse électronique de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-14": {
+  "label": "ADRESSE POSTALE DE L'AGENT DE BUYER",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PostalAddress",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-15": {
+  "label": "Adresse Ligne 1 de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-16": {
+  "label": "Adresse Ligne 2 de l'Agent de l'Acheteur",
+  "ubl": "cac:Party/cac:AgentParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-17": {
+  "label": "Adresse Ligne 3 de l'Agent de l'Acheteur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-18": {
+  "label": "Code Postal de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-19": {
+  "label": "Ville de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-20": {
+  "label": "Code subdivision Pays de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-21": {
+  "label": "Code Pays de l'Agent de l'Acheteur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-22": {
+  "label": "CONTACT DE L'AGENT DE BUYER",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:Contact",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-23": {
+  "label": "Nom Contact de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:Contact/cac:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-24": {
+  "label": "Téléphone contact de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:Contact/cbc:Telephone",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-25": {
+  "label": "Email Contact de l'Agent de l'Acheteur",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:AgentParty/cac:Contact/cbc:ElectronicMail",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:BuyerAgentTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-9"
+ },
+ "EXT-FR-FE-26": {
+  "label": "Code du rôle du bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cbc:IndustryClassificationCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:RoleCode",
+  "bg": "BG-10"
+ },
+ "BT-60": {
+  "label": "Identifiant complémentaire du bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:GlobalID",
+  "bg": "BG-10"
+ },
+ "BT-60-1": {
+  "label": "Identifiant du schéma de l'identifiant complémentaire du bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-10"
+ },
+ "BT-61": {
+  "label": "Identifiant d’enregistrement légal du bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-10"
+ },
+ "BT-61-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "Invoice/cac:PayeeParty/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-27": {
+  "label": "Identifiant à la TVA du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-28": {
+  "label": "Identifiant du schéma à la TVA du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID =VA",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-29": {
+  "label": "Adresse électronique du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cbc:EndpointID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-30": {
+  "label": "Identifiant du schéma de l'adresse électronique du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-31": {
+  "label": "ADRESSE POSTALE DU BÉNÉFICIAIRE",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-32": {
+  "label": "Adresse de Bénéficiaire - Ligne 1",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-33": {
+  "label": "Adresse de Bénéficiaire - Ligne 2",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-34": {
+  "label": "Adresse de Bénéficiaire - Ligne 3",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-35": {
+  "label": "Localité du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-36": {
+  "label": "Code postal du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-37": {
+  "label": "Subdivision du pays du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-38": {
+  "label": "Code de pays du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-39": {
+  "label": "CONTACT DU BÉNÉFICIAIRE",
+  "ubl": "Invoice/cac:PayeeParty/cac:Contact",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-40": {
+  "label": "Point de contact du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:Contact/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-41": {
+  "label": "Numéro téléphone contact du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:Contact/cbc:Telephone",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-42": {
+  "label": "Adresse électronique contact du Bénéficiaire",
+  "ubl": "Invoice/cac:PayeeParty/cac:Contact/cbc:ElectronicMail",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayeeTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-BG-02": {
+  "label": "PAYEUR DE LA FACTURE (payer)",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-43": {
+  "label": "Raison sociale du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:Name",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-44": {
+  "label": "Code du rôle du Payeur",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cbc:IndustryClassificationCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:RoleCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-45": {
+  "label": "Appellation commerciale du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PartyName/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-46": {
+  "label": "Identifiant complémentaire du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:GlobalID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-47": {
+  "label": "Identifiant du schéma de l'identifiant complémentaire du payeur",
+  "ubl": "cac:PaymentMandate/cac:PayerParty/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-48": {
+  "label": "SIREN du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-49": {
+  "label": "Identifiant du schéma du SIREN du payeur",
+  "ubl": "cac:PaymentMandate/cac:PayerParty/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-50": {
+  "label": "Identifiant à la TVA payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-51": {
+  "label": "Schema d'Identifiant TVA fiscal du payeur",
+  "ubl": "cac:PaymentMandate/cac:PayerParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-52": {
+  "label": "Adresse électronique du payeur",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cbc:EndpointID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-53": {
+  "label": "Identifiant du schéma de l'adresse électronique du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-54": {
+  "label": "ADRESSE POSTALE DU PAYEUR",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PostalAddress",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-55": {
+  "label": "Adresse de Payeur - Ligne 1",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-56": {
+  "label": "Adresse du Payeur - Ligne 2",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-57": {
+  "label": "Adresse du Payeur - Ligne 3",
+  "ubl": "cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-58": {
+  "label": "Localité du Payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-59": {
+  "label": "Code postal du Payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-60": {
+  "label": "Subdivision du pays du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-61": {
+  "label": "Code de pays du payeur",
+  "ubl": "cac:PaymentMandate/cac:PayerParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-62": {
+  "label": "CONTACT DU PAYEUR",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:Contact",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-63": {
+  "label": "Point de contact du Payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:Contact/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-64": {
+  "label": "Numéro téléphone contact du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:Contact/cbc:Telephone",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-65": {
+  "label": "Adresse électronique contact du payeur",
+  "ubl": "cac:PaymentMeans/cac:PaymentMandate/cac:PayerParty/cac:Contact/cbc:ElectronicMail",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:PayerTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-BG-03": {
+  "label": "AGENT DE VENDEUR (par exemple Tiers VALIDEUR DE LA FACTURE avant émission)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:AgentParty",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-66": {
+  "label": "Nom Raison sociale de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:Name",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-67": {
+  "label": "Code du rôle de l'Agent de Vendeur",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cbc:IndustryClassificationCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:RoleCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-68": {
+  "label": "Appellation commerciale de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PartyName/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-69": {
+  "label": "Identifiant complémentaire de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:GlobalID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-70": {
+  "label": "Schéma de l'identifiant complémentaire de l'agent du vendeur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-71": {
+  "label": "Numero de SIREN de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-72": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:Party/cac:AgentParty/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-73": {
+  "label": "Identifiant à la TVA de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-74": {
+  "label": "Schéma d'Identifiant fiscal de l'Agent de Vendeur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-75": {
+  "label": "Adresse électronique de l'Agent de Vendeur",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cbc:EndpointID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-76": {
+  "label": "Identifiant du schéma de l'adresse électronique de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-77": {
+  "label": "ADRESSE POSTALE DE L'AGENT DE VENDEUR (DU VALIDEUR avant Déposé)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PostalAddress",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-78": {
+  "label": "Adresse Ligne 1 de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-79": {
+  "label": "Adresse Ligne 2 de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-80": {
+  "label": "Adresse Ligne 3 de l'Agent de Vendeur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-81": {
+  "label": "Ville de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-82": {
+  "label": "Code Postal de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-83": {
+  "label": "Code subdivision Pays de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-84": {
+  "label": "Code Pays de l'Agent de Vendeur",
+  "ubl": "cac:Party/cac:AgentParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-85": {
+  "label": "CONTACT DE L'AGENT DE VENDEUR (DU VALIDEUR avant Déposé)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:Contact",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-86": {
+  "label": "Nom Contact de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:Contact/cac:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-87": {
+  "label": "Téléphone contact de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:Contact/cac:Telephone",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-88": {
+  "label": "Email Contact de l'Agent de Vendeur",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:AgentParty/cac:Contact/cac:ElectronicMail",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SalesAgentTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-BG-04": {
+  "label": "ADRESSEE A (invoicee) (reçoit la facture à la place du BUYER)",
+  "ubl": "Invoice/cac:AccountingCustomerParty/cac:Party/cac:ServiceProviderParty/cac:Party",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-89": {
+  "label": "Raison sociale",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:Name",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-90": {
+  "label": "Code du rôle",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:ServiceProviderParty/cac:Party/cbc:IndustryClassificationCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:RoleCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-91": {
+  "label": "Appellation commerciale",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyName/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-92": {
+  "label": "Identifiant complémentaire de l'adressé à",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:GlobalID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-92-1": {
+  "label": "Schéma de l'identifiant complémentaire de l'adressé à",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-94": {
+  "label": "Numero SIREN",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-95": {
+  "label": "Identifiant du schéma SIREN",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-96": {
+  "label": "Identifiant à la TVA",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-97": {
+  "label": "Identifiant du schéma TVA",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-98": {
+  "label": "Identifiant d'adressage",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:ServiceProviderParty/cac:Party/cbc:EndpointID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-99": {
+  "label": "Identifiant du schéma de l'identifiant d'adressage",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-100": {
+  "label": "ADRESSE POSTALE",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-101": {
+  "label": "Adresse - Ligne 1",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-102": {
+  "label": "Adresse - Ligne 2",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-103": {
+  "label": "Adresse - Ligne 3",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-104": {
+  "label": "Localité",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-105": {
+  "label": "Code postal",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-106": {
+  "label": "Code subdivision Pays",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-107": {
+  "label": "Code de pays",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-108": {
+  "label": "CONTACT",
+  "ubl": "cac:AccountingCustomerParty/cac:Party/cac:ServiceProviderParty/cac:Party/cac:Contact",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-109": {
+  "label": "Point de contact Facturé à",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:Contact/cac:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-110": {
+  "label": "Numéro de téléphone du contact du facturé à",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:Contact/cac:Telephone",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-111": {
+  "label": "Adresse électronique du contact du facturé à",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:/cac:Contact/cac:ElectronicMail",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoiceeTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-BG-05": {
+  "label": "TIERS FACTURANT (invoicer) (il facture à la place du fournisseur)",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:ServiceProviderParty/cac:Party",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-112": {
+  "label": "Raison sociale du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:Name",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-113": {
+  "label": "Code du rôle du Facturant (Service Facturier)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:ServiceProviderParty/cac:Party/cbc:IndustryClassificationCode",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:RoleCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-114": {
+  "label": "Appellation commerciale du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyName/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-115": {
+  "label": "Identifiant complémentaire du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:GlobalID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-116": {
+  "label": "Identifiant du schéma de l'identifiant complémentaire",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-117": {
+  "label": "Numero SIREN du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-118": {
+  "label": "Identifiant du schéma du SIREN facturant",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-119": {
+  "label": "Identifiant à la TVA du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-120": {
+  "label": "Identifiant du schéma de TVA du Facturant (Service Facturier)",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-121": {
+  "label": "Adresse électronique du Facturant (Service Facturier) (adresse de facturation)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:ServiceProviderParty/cac:Party/cbc:EndpointID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-122": {
+  "label": "Identifiant du schéma de l'adresse électronique du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cbc:EndpointID/@schemeID",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-123": {
+  "label": "ADRESSE POSTALE DU FACTURANT (SERVICE FACTURIER)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-124": {
+  "label": "Adresse du Facturant (Service Facturier) - Ligne 1",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-125": {
+  "label": "Adresse du Facturant (Service Facturier) - Ligne 2",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-126": {
+  "label": "Adresse du Facturant (Service Facturier) - Ligne 3",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-127": {
+  "label": "Localité du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-128": {
+  "label": "Code postal du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-129": {
+  "label": "Code subdivision Pays du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-130": {
+  "label": "Code de pays du Facturant (Service Facturier)",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-131": {
+  "label": "CONTACT DU FACTURANT (SERVICE FACTURIER)",
+  "ubl": "cac:AccountingSupplierParty/cac:Party/cac:ServiceProviderParty/cac:Party/cac:Contact",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:DefinedTradeContact",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-132": {
+  "label": "Point de contact du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:Contact/cac:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:DefinedTradeContact/ram:PersonName",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-133": {
+  "label": "Numéro de téléphone du contact du Facturant (Service Facturier)",
+  "ubl": "cac:Party/cac:ServiceProviderParty/cac:Party/cac:Contact/cac:Telephone",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:DefinedTradeContact/ram:TelephoneUniversalCommunication/ram:CompleteNumber",
+  "bg": "BG-10"
+ },
+ "EXT-FR-FE-134": {
+  "label": "Adresse électronique du contact du Facturant (Service Facturier)",
+  "ubl": "cac:ServiceProviderParty/cac:Party/cac:/cac:Contact/cac:ElectronicMail",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:InvoicerTradeParty/ram:DefinedTradeContact/ram:EmailURIUniversalCommunication/ram:URIID",
+  "bg": "BG-10"
+ },
+ "BT-63-0": {
+  "label": "Identifiant du schéma de l'identifiant TVA du représentant fiscal",
+  "ubl": "cac:TaxRepresentativeParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-11"
+ },
+ "BT-63-1": {
+  "label": "Identifiant du schéma de l'identifiant TVA du représentant fiscal",
+  "ubl": "cac:TaxRepresentativeParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-11"
+ },
+ "BT-64": {
+  "label": "Adresse du représentant fiscal - Ligne 1",
+  "ubl": "Invoice/cac:TaxRepresentativeParty/cac:PostalAddress/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-12"
+ },
+ "BT-65": {
+  "label": "Adresse du représentant fiscal - Ligne 2",
+  "ubl": "Invoice/cac:TaxRepresentativeParty/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-12"
+ },
+ "BT-164": {
+  "label": "Adresse du représentant fiscal - Ligne 3",
+  "ubl": "Invoice/cac:TaxRepresentativeParty/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-12"
+ },
+ "BT-66": {
+  "label": "Localité du représentant fiscal",
+  "ubl": "Invoice/cac:TaxRepresentativeParty/cac:PostalAddress/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-12"
+ },
+ "BT-67": {
+  "label": "Code postal du représentant fiscal",
+  "ubl": "Invoice/cac:TaxRepresentativeParty/cac:PostalAddress/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-12"
+ },
+ "BT-68": {
+  "label": "Subdivision du pays du représentant fiscal",
+  "ubl": "Invoice/cac:TaxRepresentativeParty/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:SellerTaxRepresentativeTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-12"
+ },
+ "BT-71": {
+  "label": "Identifiant de l'établissement de livraison",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:GlobalID",
+  "bg": "BG-13"
+ },
+ "BT-71-1": {
+  "label": "Identifiant du schéma de l'établissement de livraison",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-13"
+ },
+ "BT-72-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeDelivery/ram:ActualDeliverySupplyChainEvent/ram:OccurrenceDateTime/udt:DateTimeString/@format",
+  "bg": "BG-13"
+ },
+ "BT-73-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:BillingSpecifiedPeriod/ram:StartDateTime/udt:DateTimeString/@format",
+  "bg": "BG-14"
+ },
+ "BT-74-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:ApplicableHeaderTradeSettlement/ram:BillingSpecifiedPeriod/ram:EndDateTime/udt:DateTimeString/@format",
+  "bg": "BG-14"
+ },
+ "BT-75": {
+  "label": "Adresse de livraison (ligne 1)",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:StreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-15"
+ },
+ "BT-76": {
+  "label": "Adresse de livraison (ligne 2)",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:AdditionalStreetName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-15"
+ },
+ "BT-165": {
+  "label": "Adresse de livraison (ligne 3)",
+  "ubl": "cac:Delivery/cac:DeliveryLocation/cac:Address/cac:AddressLine/cbc:Line",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-15"
+ },
+ "BT-77": {
+  "label": "Localité Adresse de livraison",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-15"
+ },
+ "BT-78": {
+  "label": "Code postal Adresse de livraison",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-15"
+ },
+ "BT-79": {
+  "label": "Subdivision du pays",
+  "ubl": "Invoice/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CountrySubentity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-15"
+ },
+ "EXT-FR-FE-186": {
+  "label": "Nom du lieu de livraison",
+  "ubl": "cac:DeliveryTerms/DeliveryLocation/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:ApplicableTradeDeliveryTerms/ram:RelevantTradeLocation/ram:Name",
+  "bg": "BG-15"
+ },
+ "BT-82": {
+  "label": "Libellé du moyen de paiement",
+  "ubl": "Invoice/cac:PaymentMeans/cbc:PaymentMeansCode/@name",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:Information",
+  "bg": "BG-16"
+ },
+ "BT-85": {
+  "label": "Nom de compte de paiement",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeePartyCreditorFinancialAccount/ram:AccountName",
+  "bg": "BG-17"
+ },
+ "BT-86": {
+  "label": "Identifiant de prestataire de services de paiement (BIC)",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:PayeeSpecifiedCreditorFinancialInstitution/ram:BICID",
+  "bg": "BG-17"
+ },
+ "BT-88": {
+  "label": "Nom de compte de paiement",
+  "ubl": "Invoice/cac:PaymentMeans/cac:CardAccount/cbc:HolderName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:ApplicableTradeSettlementFinancialCard/ram:CardholderName",
+  "bg": "BG-18"
+ },
+ "BT-89": {
+  "label": "Identifiant de référence de mandat (Information obligatoire dans le cas de prélèvement SEP",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradePaymentTerms/ram:DirectDebitMandateID",
+  "bg": "BG-19"
+ },
+ "BT-90": {
+  "label": "Identifiant bancaire du créancier (Information obligatoire dans le cas de prélèvement SEPA",
+  "ubl": "Invoice/cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:CreditorReferenceID",
+  "bg": "BG-19"
+ },
+ "BT-91": {
+  "label": "Identifiant de compte débité (IBAN)",
+  "ubl": "Invoice/cac:PaymentMeans/cac:PaymentMandate/cac:PayerFinancialAccount/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementPaymentMeans/ram:PayerPartyDebtorFinancialAccount/ram:IBANID",
+  "bg": "BG-19"
+ },
+ "BT-93": {
+  "label": "Assiette de la remise au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/cbc:BaseAmount",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:BasisAmount",
+  "bg": "BG-20"
+ },
+ "BT-94": {
+  "label": "Pourcentage de remise au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/cbc:MultiplierFactorNumeric",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CalculationPercent",
+  "bg": "BG-20"
+ },
+ "BT-95-0": {
+  "label": "Qualifiant d'identifiant TVA de la remise au niveau du document",
+  "ubl": "cac:AllowanceCharge/cac:TaxCategory/cac:TaxScheme/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:TypeCode",
+  "bg": "BG-20"
+ },
+ "BT-96": {
+  "label": "Taux de TVA de la remise",
+  "ubl": "Invoice/cac:AllowanceCharge/cac:TaxCategory/cbc:Percent",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:RateApplicablePercent",
+  "bg": "BG-20"
+ },
+ "EXT-FR-FE-187": {
+  "label": "Motif d'exonération de la TVA de la remise au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/TaxCategory/cbc:TaxExemptionReason",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:ExemptionReason",
+  "bg": "BG-20"
+ },
+ "EXT-FR-FE-188": {
+  "label": "Code Motif d'exonération de la TVA de la remise au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/TaxCategory/cbc:TaxExemptionReasonCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:ExemptionReasonCode",
+  "bg": "BG-20"
+ },
+ "BT-100": {
+  "label": "Assiette des charges ou frais au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/cbc:BaseAmount",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:BasisAmount",
+  "bg": "BG-21"
+ },
+ "BT-101": {
+  "label": "Pourcentage de charges ou frais au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/cbc:MultiplierFactorNumeric",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CalculationPercent",
+  "bg": "BG-21"
+ },
+ "BT-102-0": {
+  "label": "Qualifiant du code de type de TVA des charges ou frais au niveau du document",
+  "ubl": "cac:AllowanceCharge/cac:TaxCategory/cac:TaxScheme/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:TypeCode",
+  "bg": "BG-21"
+ },
+ "BT-103": {
+  "label": "Taux de TVA de charge/frais",
+  "ubl": "Invoice/cac:AllowanceCharge/cac:TaxCategory/cbc:Percent",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:RateApplicablePercent",
+  "bg": "BG-21"
+ },
+ "EXT-FR-FE-189": {
+  "label": "Motif d'exonération de la TVA des charges et frais au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/TaxCategory/cbc:TaxExemptionReason",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:Reason",
+  "bg": "BG-21"
+ },
+ "EXT-FR-FE-190": {
+  "label": "Code Motif d'exonération de la TVA des charges et frais au niveau du document",
+  "ubl": "Invoice/cac:AllowanceCharge/TaxCategory/cbc:TaxExemptionReasonCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CategoryTradeTax/ram:ReasonCode",
+  "bg": "BG-21"
+ },
+ "BT-110-0": {
+  "label": "=CONCATENATE(\"(\",O363,\")\")",
+  "ubl": "Invoice/cac:TaxTotal",
+  "cii": "",
+  "bg": "BG-22"
+ },
+ "BT-110-1": {
+  "label": "Code devise du montant total de TVA",
+  "ubl": "Invoice/cac:TaxTotal/cbc:TaxAmount/@currencyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:TaxTotalAmount/@currencyID",
+  "bg": "BG-22"
+ },
+ "BT-111-00": {
+  "label": "=CONCATENATE(\"(\",O366,\")\")",
+  "ubl": "Invoice/cac:TaxTotal",
+  "cii": "",
+  "bg": "BG-22"
+ },
+ "BT-111-1": {
+  "label": "Code devise du montant total TVA (exprimé dans la devise de comptabilisation)",
+  "ubl": "Invoice/cac:TaxTotal/cbc:TaxAmount/@currencyID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeSettlement/ram:SpecifiedTradeSettlementHeaderMonetarySummation/ram:TaxTotalAmount/@currencyID",
+  "bg": "BG-22"
+ },
+ "BT-123": {
+  "label": "Description de document justificatif",
+  "ubl": "Invoice/cac:AdditionalDocumentReference/cbc:DocumentDescription",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:Name",
+  "bg": "BG-24"
+ },
+ "BT-124": {
+  "label": "Emplacement de document externe",
+  "ubl": "Invoice/cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:URIID",
+  "bg": "BG-24"
+ },
+ "BT-125-1": {
+  "label": "Code MIME du document joint",
+  "ubl": "Invoice/cac:AdditionalDocumentReference/cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@mimeCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:AttachmentBinaryObject/@mimeCode",
+  "bg": "BG-24"
+ },
+ "BT-125-2": {
+  "label": "Nom de fichier du document joint",
+  "ubl": "Invoice/cac:AdditionalDocumentReference/cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@filename",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:AdditionalReferencedDocument/ram:AttachmentBinaryObject/@filename",
+  "bg": "BG-24"
+ },
+ "BT-127-00": {
+  "label": "Note de ligne de facture (obligatoire uniquement en cas d'éco taxe (DEEE)",
+  "ubl": "Invoice/cac:InvoiceLine/cbc:Note",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:AssociatedDocumentLineDocument/ram:IncludedNote",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-183": {
+  "label": "Code du sujet de la note de ligne",
+  "ubl": "Invoice/cac:InvoiceLine/cbc:Note",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:AssociatedDocumentLineDocument/ram:IncludedNote/ram:SubjectCode",
+  "bg": "BG-25"
+ },
+ "BT-127": {
+  "label": "Note de ligne de facture",
+  "ubl": "Invoice/cac:InvoiceLine/cbc:Note",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:AssociatedDocumentLineDocument/ram:IncludedNote/ram:Content",
+  "bg": "BG-25"
+ },
+ "BT-128": {
+  "label": "Identifiant d'objet de ligne de facture",
+  "ubl": "Invoice/cac:DocumentReference/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:AdditionalReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-25"
+ },
+ "BT-128-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "Invoice/cac:DocumentReference/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:AdditionalReferencedDocument/ram:ReferenceTypeCode",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-191": {
+  "label": "Quantité dans une unité de la ligne Parent (EXT-FR-FE-162)",
+  "ubl": "Invoice/cac:Item/cbc:PackQuantity",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:PerPackageUnitQuantity",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-191-1": {
+  "label": "Code de l'unité de mesure de la Quantité dans une unité de la ligne Parent (EXT-FR-FE-162)",
+  "ubl": "Invoice/cac:Item/cbc:PackQuantity/@unitCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:PerPackageUnitQuantity/@unitCode",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-181": {
+  "label": "Montant TVA de la ligne de facture dans la devise de la facture",
+  "ubl": "cac:TaxTotal/cbc:TaxAmount",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeSettlementLineMonetarySummation/ram:TaxTotalAmount",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-181-1": {
+  "label": "Devise du Montant TVA de la ligne de facture",
+  "ubl": "cac:TaxTotal/cbc:TaxAmount/@currencyID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeSettlementLineMonetarySummation/ram:TaxTotalAmount/@currencyID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-182": {
+  "label": "Montant TVA de la ligne de facture dans la devise de comptabilisation",
+  "ubl": "cac:TaxTotal/cbc:TaxAmount",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeSettlementLineMonetarySummation/ram:TaxTotalAmount",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-182-1": {
+  "label": "Devise de comptabilisation du Montant TVA de la ligne de facture",
+  "ubl": "cac:TaxTotal/cbc:TaxAmount/@currencyID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeSettlementLineMonetarySummation/ram:TaxTotalAmount/@currencyID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-184": {
+  "label": "Montant total avec TVA de la ligne de facture",
+  "ubl": "",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeSettlementLineMonetarySummation/ram:GrandTotalAmount",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-135": {
+  "label": "Identifiant de la commande générée par l'acheteur",
+  "ubl": "Invoice/cac:InvoiceLine/cac:OrderLineReference/cac:OrderReference/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-BG-06": {
+  "label": "AJOUT REFERENCE A FACTURE ANTERIEURE EN LIGNE (pour les reprises en ligne, ex: factures d'",
+  "ubl": "Invoice/cac:InvoiceLine/cac:BillingReference",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:InvoiceReferencedDocument",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-136": {
+  "label": "ID de la facture antérieure",
+  "ubl": "Invoice/cac:InvoiceLine/cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:InvoiceReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-137": {
+  "label": "Type de facture antérieure",
+  "ubl": "Invoice/cac:InvoiceLine/cac:BillingReference/cac:InvoiceDocumentReference/cbc:DocumentTypeCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:InvoiceReferencedDocument/ram:TypeCode",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-138": {
+  "label": "Date de facture antérieure",
+  "ubl": "Invoice/cac:InvoiceLine/cac:BillingReference/cac:InvoiceDocumentReference/cbc:IssueDate",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:InvoiceReferencedDocument/ram:FormattedIssueDateTime/qdt:DateTimeString",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-138-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:InvoiceReferencedDocument/ram:FormattedIssueDateTime/qdt:DateTimeString/@format",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-139": {
+  "label": "N° de ligne de facture antérieure",
+  "ubl": "Invoice/cac:InvoiceLine/cac:BillingReference/cac:BillingReferenceLine/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:InvoiceReferencedDocument/ram:LineID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-BG-07": {
+  "label": "Détail de l'avis d'expédition",
+  "ubl": "Invoice/cac:InvoiceLine/cac:DespatchLineReference",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ReceivingAdviceReferencedDocument",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-140": {
+  "label": "Identifiant de l'avis d'expédition",
+  "ubl": "Invoice/cac:InvoiceLine/cac:DespatchLineReference/cac:DocumentReference/cac:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ReceivingAdviceReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-141": {
+  "label": "Ligne de l'avis d'expédition facturé",
+  "ubl": "Invoice/cac:InvoiceLine/cac:DespatchLineReference/cbc:LineID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ReceivingAdviceReferencedDocument/ram:LineID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-BG-08": {
+  "label": "Détail de l'avis de réception à la ligne",
+  "ubl": "Invoice/cac:InvoiceLine/cac:ReceiptLineReference",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:DespatchAdviceReferencedDocument",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-142": {
+  "label": "Identifiant du bon de réception",
+  "ubl": "Invoice/cac:InvoiceLine/cac:ReceiptLineReference/cac:DocumentReference/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:DespatchAdviceReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-143": {
+  "label": "Ligne du bon de réception facturé",
+  "ubl": "Invoice/cac:InvoiceLine/cac:ReceiptLineReference/cbc:LineID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:DespatchAdviceReferencedDocument/ram:LineID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-BG-09": {
+  "label": "Détail de l'ordre de Vente à la ligne",
+  "ubl": "Invoice/cac:InvoiceLine/cac:OrderLineReference",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:SellerOrderReferencedDocument",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-144": {
+  "label": "Identifiant de l'ordre de vente à la ligne",
+  "ubl": "Invoice/cac:InvoiceLine/cac:OrderLineReference/cac:OrderReference/cbc:SalesOrderID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:SellerOrderReferencedDocument/ram:IssuerAssignedID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-145": {
+  "label": "Ligne de de l'ordre de vente facturé",
+  "ubl": "Invoice/cac:InvoiceLine/cac:OrderLineReference/cbc:SalesOrderLineID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:SellerOrderReferencedDocument/ram:LineID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-BG-10": {
+  "label": "Détail de l'adresse de livraison à la ligne (Gestion du multi livraison)",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Delivery",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-146": {
+  "label": "Identifiant global du lieu de livraison à la ligne",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:GlobalID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-148": {
+  "label": "Identifiant du schéma de l'identifiant global du lieu de livraison",
+  "ubl": "cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cbc:ID/@schemeID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-149": {
+  "label": "Nom du lieu de livraison (si different entête)",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cbc:Name",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:Name",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-150": {
+  "label": "ADRESSE POSTALE DE LIVRAISON A LA LIGNE",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cac:Address",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-151": {
+  "label": "Ligne Adresse 1 (si différent entête)",
+  "ubl": "cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:StreetName",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-152": {
+  "label": "Ligne adresse 2 (si différent entête)",
+  "ubl": "cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:AdditionalStreetName",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-153": {
+  "label": "Ligne Adresse 3 (si différent entête)",
+  "ubl": "cac:Delivery/cac:DeliveryLocation/cac:Address/cac:AddressLine/cbc:Line",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-154": {
+  "label": "Ville de livraison (si différent entête)",
+  "ubl": "cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-155": {
+  "label": "Code Postal de livraison (si différent entête)",
+  "ubl": "cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-156": {
+  "label": "Subdivision Pays (si différent entête)",
+  "ubl": "cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CountrySubentity",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-157": {
+  "label": "Code Pays (si différent entête)",
+  "ubl": "cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ShipToTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-BG-11": {
+  "label": "Détail sur la livraison réelle",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Delivery/cac:DeliveryLocation",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ActualDeliverySupplyChainEvent",
+  "bg": "BG-25"
+ },
+ "EXT-FR-FE-158": {
+  "label": "Date de livraison à la ligne valeur",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Delivery/cbc:ActualDeliveryDate",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeDelivery/ram:ActualDeliverySupplyChainEvent/ram:OccurrenceDateTime/udt:DateTimeString",
+  "bg": "BG-25"
+ },
+ "BT-134-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:BillingSpecifiedPeriod/ram:StartDateTime/udt:DateTimeString/@format",
+  "bg": "BG-26"
+ },
+ "BT-135-1": {
+  "label": "Format date",
+  "ubl": "",
+  "cii": "ram:SpecifiedLineTradeSettlement/ram:BillingSpecifiedPeriod/ram:EndDateTime/udt:DateTimeString/@format",
+  "bg": "BG-26"
+ },
+ "BT-137": {
+  "label": "Assiette de la remise de ligne de facture",
+  "ubl": "Invoice/cac:InvoiceLine/cac:AllowanceCharge/cbc:BaseAmount",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:BasisAmount",
+  "bg": "BG-27"
+ },
+ "BT-138": {
+  "label": "Pourcentage de remise de ligne de facture",
+  "ubl": "Invoice/cac:InvoiceLine/cac:AllowanceCharge/cbc:MultiplierFactorNumeric",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CalculationPercent",
+  "bg": "BG-27"
+ },
+ "BT-142": {
+  "label": "Assiette des charges ou frais applicables à la ligne de facture",
+  "ubl": "Invoice/cac:InvoiceLine/cac:AllowanceCharge/cbc:BaseAmount",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:BasisAmount",
+  "bg": "BG-28"
+ },
+ "BT-143": {
+  "label": "Pourcentage de charges ou frais applicable à la ligne de facture",
+  "ubl": "Invoice/cac:InvoiceLine/cac:AllowanceCharge/cbc:MultiplierFactorNumeric",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:SpecifiedTradeAllowanceCharge/ram:CalculationPercent",
+  "bg": "BG-28"
+ },
+ "BT-147": {
+  "label": "Rabais sur le prix de l'article (montant unitaire de remise sur le prix catalogue)",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Price/cac:AllowanceCharge/cbc:Amount",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:GrossPriceProductTradePrice/ram:AppliedTradeAllowanceCharge/ram:ActualAmount",
+  "bg": "BG-29"
+ },
+ "BT-149": {
+  "label": "Quantité de base du prix de l’article",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Price/cbc:BaseQuantity",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:NetPriceProductTradePrice/ram:BasisQuantity",
+  "bg": "BG-29"
+ },
+ "BT-150": {
+  "label": "Code de l’unité de mesure de la quantité de base du prix de l’article",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Price/cbc:BaseQuantity/@unitCode",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:NetPriceProductTradePrice/ram:BasisQuantity/@unitCode",
+  "bg": "BG-29"
+ },
+ "BT-151-2": {
+  "label": "Obligatoire en UBL : utiliser “VAT”",
+  "ubl": "cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cac:TaxScheme/cbc:ID",
+  "cii": "",
+  "bg": "BG-30"
+ },
+ "EXT-FR-FE-178": {
+  "label": "Raison d'exemption de TVA en ligne",
+  "ubl": "cac:Item/cac:ClassifiedTaxCategory/cbc:TaxExemptionReason",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:ExemptionReason",
+  "bg": "BG-30"
+ },
+ "EXT-FR-FE-179": {
+  "label": "Code de raison d'exemption de TVA en ligne",
+  "ubl": "cac:Item/cac:ClassifiedTaxCategory/cbc:TaxExemptionReasonCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:ExemptionReasonCode",
+  "bg": "BG-30"
+ },
+ "EXT-FR-FE-180": {
+  "label": "Code de date d'exigibilité de la taxe sur la valeur ajoutée à la ligne",
+  "ubl": "cac:InvoicePeriod/cbc:DescriptionCode",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeSettlement/ram:ApplicableTradeTax/ram:DueDateTypeCode",
+  "bg": "BG-30"
+ },
+ "BT-156": {
+  "label": "Identifiant acheteur de l'article",
+  "ubl": "Invoice/cac:InvoiceLine/cac:Item/cac:BuyersItemIdentification/cbc:ID",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedTradeProduct/ram:BuyerAssignedID",
+  "bg": "BG-31"
+ },
+ "BT-157-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:InvoiceLine/cac:Item/cac:StandardItemIdentification/cbc:ID/@schemeID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedTradeProduct/ram:GlobalID/@schemeID",
+  "bg": "BG-31"
+ },
+ "BT-158-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode/@listID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedTradeProduct/ram:DesignatedProductClassification/ram:ClassCode/@listID",
+  "bg": "BG-31"
+ },
+ "BT-158-2": {
+  "label": "Identifiant version du schéma",
+  "ubl": "cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode/@listVersionID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedTradeProduct/ram:DesignatedProductClassification/ram:ClassCode/@listVersionID",
+  "bg": "BG-31"
+ },
+ "EXT-FR-FE-BG-12": {
+  "label": "VENDEUR à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty",
+  "cii": "rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-164": {
+  "label": "Raison sociale du vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyLegalEntity/cbc:RegistrationName",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:Name",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-165": {
+  "label": "Appellation commerciale du vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyName/cbc:Name",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedLegalOrganization/ram:TradingBusinessName",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-166": {
+  "label": "Identifiant privé du vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyIdentification/cbc:ID",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:GlobalID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-166-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyIdentification/cbc:ID/@schemeID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:GlobalID/@schemeID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-167": {
+  "label": "Numéro de SIREN du Vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyLegalEntity/cbc:CompanyID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedLegalOrganization/ram:ID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-167-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyLegalEntity/cbc:CompanyID/@schemeID",
+  "cii": "ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedLegalOrganization/ram:ID/@schemeID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-168": {
+  "label": "Identifiant à la TVA du vendeur",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-168-1": {
+  "label": "Qualifiant d'Identifiant à la TVA du Vendeur",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-169": {
+  "label": "Identifiant fiscal du vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyTaxScheme/cbc:CompanyID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-169-1": {
+  "label": "Qualifiant d'Identifiant fiscal du Vendeur",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID",
+  "cii": "ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:SpecifiedTaxRegistration/ram:ID/@schemeID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-170": {
+  "label": "Adresse électronique du vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cbc:EndpointID",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:URIUniversalCommunication/ram:URIID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-170-1": {
+  "label": "Identifiant du schéma",
+  "ubl": "cac:Item/cac:ManufacturerParty/cbc:EndpointID/@schemeID",
+  "cii": "ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:URIUniversalCommunication/ram:URIID/@schemeID",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-BG-13": {
+  "label": "ADRESSE POSTALE DU VENDEUR EN LIGNE",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress",
+  "cii": "rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-171": {
+  "label": "Adresse du vendeur en ligne - Ligne 1",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cbc:StreetName",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:LineOne",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-172": {
+  "label": "Adresse du vendeur en ligne - Ligne 2",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cbc:AdditionalStreetName",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:LineTwo",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-173": {
+  "label": "Adresse du vendeur en ligne - Ligne 3",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cac:AddressLine/cbc:Line",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:LineThree",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-174": {
+  "label": "Localité du vendeur en ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cbc:CityName",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:CityName",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-175": {
+  "label": "Code postal du vendeur à la ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cbc:PostalZone",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:PostcodeCode",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-176": {
+  "label": "Subdivision du pays du vendeur en ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cbc:CountrySubentity",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:CountrySubDivisionName",
+  "bg": "BG-32"
+ },
+ "EXT-FR-FE-177": {
+  "label": "Code de pays du vendeur en ligne",
+  "ubl": "cac:Item/cac:ManufacturerParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode",
+  "cii": "ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:ItemSellerTradeParty/ram:PostalTradeAddress/ram:CountryID",
+  "bg": "BG-32"
+ }
+}

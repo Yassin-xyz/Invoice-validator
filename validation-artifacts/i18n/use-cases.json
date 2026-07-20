@@ -1,0 +1,459 @@
+[
+ {
+  "id": 1,
+  "titre": "Multi-commande / Multi-Livraison",
+  "termes": [
+   "EXT-FR-FE-135",
+   "EXT-FR-FE-140",
+   "EXT-FR-FE-141",
+   "EXT-FR-FE-146",
+   "EXT-FR-FE-148",
+   "EXT-FR-FE-149",
+   "EXT-FR-FE-150",
+   "EXT-FR-FE-BG-10"
+  ],
+  "note": "Pour traiter le Multi-commande/Multi-livraison, les informations concernées sont les suivantes au niveau de la ligne (bloc BG-25) Utiliser les formats pour le profil EXTENDED-CTC-FR - EXT-FR-FE-135 : N° de commande à la "
+ },
+ {
+  "id": 2,
+  "titre": "Facture déjà payée par l’ACHETEUR ou un tiers PAYEUR au moment de l’émission de la facture",
+  "termes": [
+   "BT-112",
+   "BT-113",
+   "BT-115",
+   "BT-23",
+   "BT-9",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "Deux cas sont possibles : 1. Facture déjà payée par l’acheteur BT-9 (date d'échéance) = date de paiement / antérieure ou egale à la date de facture BT-23 (cadre de facturation) = \"B2\", \"S2\" ou \"M2\" (\"Dépôt d'une facture "
+ },
+ {
+  "id": 3,
+  "titre": "Facture à payer par un tiers PAYEUR connu au moment de la facturation",
+  "termes": [
+   "EXT-FR-FE-43",
+   "EXT-FR-FE-46",
+   "EXT-FR-FE-47",
+   "EXT-FR-FE-48",
+   "EXT-FR-FE-49",
+   "EXT-FR-FE-52",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "• Le tiers payeur peut être identifié dans la facture dans le bloc « PAYEUR DE LA FACTURE » (EXT-FR-FE-BG-02) - Payeur - Raison sociale (EXT-FR-FE-43) - Identifiant légal (SIREN) (EXT-FR-FE-48) - Qualifiant identifiant -"
+ },
+ {
+  "id": 4,
+  "titre": "Facture à payer par l’acheteur et prise en charge partiellement par un tiers connu à la fa",
+  "termes": [
+   "BG-1",
+   "BG-4",
+   "BG-7",
+   "BT-113",
+   "BT-115",
+   "BT-21",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "• Le bloc VENDEUR (BG-4) est utilisé pour renseigner les informations sur le VENDEUR. • Le bloc ACHETEUR (BG-7) est utilisé pour renseigner les informations sur le client devant payer la facture (ex : l’entreprise qui do"
+ },
+ {
+  "id": 5,
+  "titre": "Facture de frais, payées par des collaborateurs (hors carte d’achat ou logée), avec factur",
+  "termes": [
+   "BT-112",
+   "BT-113",
+   "BT-115",
+   "BT-18",
+   "BT-18-1",
+   "EXT-FR-FE-43",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "La facture est au nom de l'entreprise : Le collaborateur est alors considéré comme un tiers payeur. Facture payée par le collaborateur mais au nom de l'entreprise ==> Facture électronique (B2B) ==> Le bloc payeur (EXT-FR"
+ },
+ {
+  "id": 6,
+  "titre": "Frais payés par des collaborateurs sans facture adressée à l’entreprise (simple ticket de ",
+  "termes": [
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "La facture est au nom du collaborateur : Facture déclarée en B2C par le fournisseur ==> e-reporting Elle n’est donc pas déclarée dans le cadre du B2B et ne fait pas l’objet d’une facture électronique. Payée par le collab"
+ },
+ {
+  "id": 7,
+  "titre": "Facture suite à un achat payé avec carte logée (carte d’achat)",
+  "termes": [
+   "BT-112",
+   "BT-113",
+   "BT-115",
+   "BT-23",
+   "BT-87",
+   "BT-88",
+   "BT-9",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "Dans le cas d’un achat avec une carte logée, pour une chambre d’hôtel ou des billets de train payés par l’entreprise par exemple, il s’agit d’une facture déjà payée et la date d’échéance renseignée avec la date de paieme"
+ },
+ {
+  "id": 8,
+  "titre": "Facture à payer à un tiers connu à la facturation (affacturage, centralisation de trésorer",
+  "termes": [
+   "BG-10",
+   "BG-17",
+   "BT-21",
+   "BT-22",
+   "BT-3",
+   "BT-59",
+   "BT-60",
+   "BT-61",
+   "BT-84",
+   "BT-85",
+   "BT-86",
+   "EXT-FR-FE-26",
+   "EXT-FR-FE-27",
+   "EXT-FR-FE-28",
+   "EXT-FR-FE-29",
+   "EXT-FR-FE-31",
+   "EXT-FR-FE-39"
+  ],
+  "note": "Les données relatives au paiement de la facture ne doivent être transmises que lorsque le factor a reçu le paiement par le client et non pas quand le fournisseur est payé par le factor (règle d’exigibilité de la TVA). • "
+ },
+ {
+  "id": 9,
+  "titre": "Facture à payer à un tiers connu à la facturation, qui gère aussi la commande / la récepti",
+  "termes": [
+   "BG-10",
+   "BG-17",
+   "BT-3"
+  ],
+  "note": "Ce cas est traité de la même façon que le cas n°8. Les différents rôles (commande, réception, facturation) pourront être ajoutés dans le flux de facture (flux 2) en tant que besoin. Ils n’ont pas d’incidence sur les donn"
+ },
+ {
+  "id": 10,
+  "titre": "Facture à payer à un tiers Bénéficiaire inconnu à la création de la facture, en particulie",
+  "termes": [],
+  "note": "La facture est à payer à un tiers, non connu du Portail Public de Facturation (PPF) à la création de la facture (factor inconnu). • Un contrat doit être établi entre le fournisseur et le tiers, avant que celui-ci ne puis"
+ },
+ {
+  "id": 11,
+  "titre": "Facture devant être reçue et traitée par un Tiers pour le compte de l’ACHETEUR",
+  "termes": [
+   "BG-7",
+   "EXT-FR-FE-BG-02",
+   "EXT-FR-FE-BG-04"
+  ],
+  "note": "Ce cas correspond au cas d'un tiers qui gère les factures et la comptabilité d'une entreprise. La facture est au nom de l'acheteur mais adressée à un tiers. Exemple : un établissement passe commande et la facture est env"
+ },
+ {
+  "id": 12,
+  "titre": "Intermédiaire transparent gestionnaire de facture pour son commettant ACHETEUR",
+  "termes": [],
+  "note": "L’intermédiaire transparent, au sens de la TVA, joue un rôle d’entremise entre deux personnes dans la négociation de contrat et le démarchage de fournisseurs ou clients. Au regard de la TVA, l’intermédiaire transparent e"
+ },
+ {
+  "id": 13,
+  "titre": "Facture à payer par un tiers : cas de sous-traitance avec paiement direct ou délégation de",
+  "termes": [
+   "BG-4",
+   "BG-7",
+   "BT-11",
+   "BT-112",
+   "BT-113",
+   "BT-115",
+   "BT-17",
+   "BT-18",
+   "BT-18-1",
+   "BT-21",
+   "BT-22",
+   "BT-23",
+   "EXT-FR-FE-BG-02",
+   "EXT-FR-FE-BG-03"
+  ],
+  "note": "Cas de sous-traitance en B2B : En B2B, le destinataire ne reçoit pas la facture du sous-traitant ==> Il faut donc distinguer l'émission de 2 factures : - F1 : une 1ère facture du sous-traitant pour le fournisseur/titulai"
+ },
+ {
+  "id": 14,
+  "titre": "Facture à payer par un tiers (cas de sous co-traitance - B2B)",
+  "termes": [
+   "BG-1",
+   "BG-24",
+   "BG-4",
+   "BG-7",
+   "BT-11",
+   "BT-112",
+   "BT-113",
+   "BT-115",
+   "BT-123",
+   "BT-17",
+   "BT-18",
+   "BT-18-1",
+   "BT-23",
+   "EXT-FR-FE-BG-01",
+   "EXT-FR-FE-BG-03",
+   "EXT-FR-FE-BG-04"
+  ],
+  "note": "Un fournisseur, suite à une facture du cas n°13, transmet une facture à l’acheteur du montant total de la prestation indiquant le montant déjà payé au sous-traitant • BG-4 : Le fournisseur • BG-7 : l'acheteur • BT-112 (M"
+ },
+ {
+  "id": 15,
+  "titre": "Facture de Vente suite à commande (et paiement éventuel) d’un tiers pour le compte de l’AC",
+  "termes": [
+   "BG-24",
+   "BG-4",
+   "BG-7",
+   "EXT-FR-FE-BG-01",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "La PDP1 du fournisseur transmet un flux 2 à la PDP de l’acheteur. Etant donné que c’est le tiers qui paye la facture, les spécificités des données et règles de gestion associées sont : • BG-4 : Vendeur • BG-7 : Acheteur "
+ },
+ {
+  "id": 16,
+  "titre": "Facture de débours pour remboursement de la facture de vente payée par le tiers",
+  "termes": [],
+  "note": "Ces factures sont en dehors du champ de la réforme de la facturation électronique, mais pourront néanmoins être échangées entre les PDP/OD ou entre directement entre entreprises selon les modalités qu’elles auront défini"
+ },
+ {
+  "id": 18,
+  "titre": "Gestion des notes de débit",
+  "termes": [
+   "BT-21",
+   "BT-22",
+   "BT-25",
+   "BT-3"
+  ],
+  "note": "1) Si la note de débit est validé par l'acheteur, une facture sera adressée par le fournisseur à l'acheteur. 2) Si le vendeur à une dette envers l'acheteur et valide la note de débit envoyée par l'acheteur, un avoir sera"
+ },
+ {
+  "id": 20,
+  "titre": "Facture d’acompte",
+  "termes": [
+   "BT-113",
+   "BT-23",
+   "BT-25",
+   "BT-26",
+   "BT-3",
+   "EXT-FR-FE-02"
+  ],
+  "note": "La date de versement de l’acompte doit être indiquée sur la facture d’acompte dès lors qu’elle est déterminée et si elle est différente de la date d’émission. > La facture d’acompte doit mentionner : • BT-3 (Type de fact"
+ },
+ {
+  "id": 21,
+  "titre": "Facture définitive (ou finale) après acompte",
+  "termes": [
+   "BT-113",
+   "BT-115",
+   "BT-23",
+   "BT-25",
+   "BT-26",
+   "BT-3",
+   "EXT-FR-FE-BG-06"
+  ],
+  "note": "La date de versement de l’acompte doit être indiquée sur la facture d’acompte dès lors qu’elle est déterminée et si elle est différente de la date d’émission. > La facture d’acompte doit mentionner : • BT-3 (Type de fact"
+ },
+ {
+  "id": 23,
+  "titre": "Flux en auto facturation entre un particulier et un professionnel",
+  "termes": [],
+  "note": "Un particulier qui vend ou propose des services à un professionnel de manière répétée exerce une activité commerciale à titre habituel et est donc assujetti à la TVA. Il peut ne pas être redevable de TVA s’il bénéficie d"
+ },
+ {
+  "id": 24,
+  "titre": "Gestion des arrhes",
+  "termes": [],
+  "note": "Les arrhes sont définies comme les sommes versées à titre de dédit (article 1590 du code civil) : l’acheteur peut dans ce cas annuler la vente, renoncer à son achat en abandonnant cette somme. Si l’arrhe constitue une in"
+ },
+ {
+  "id": 26,
+  "titre": "Factures avec clause de réserve contractuelle",
+  "termes": [
+   "BT-21",
+   "BT-22"
+  ],
+  "note": "Cas des factures payées à 95% par le client avec clause de réserve contractuelle générant une retenue de 5%. La retenue de garantie peut etre juste exprimée dans une note - code sujet BT-21 ABU et BT-22 : Clause de réser"
+ },
+ {
+  "id": 27,
+  "titre": "Gestion des tickets de péage vendus à un assujetti",
+  "termes": [],
+  "note": "Les tickets de péage récupérés par un assujetti entrent dans le champ de la facturation électronique si ils mentionnent : - Le taux et le montant de la TVA - Un numéro séquentiel de délivrance - Un espace réservé à l’usa"
+ },
+ {
+  "id": 28,
+  "titre": "Gestion des notes de restaurant émises par un VENDEUR assujetti établi en France",
+  "termes": [],
+  "note": "Les notes de restaurant à un assujetti entrent dans le champ de la facturation électronique mais il existe une tolérance pour les notes inférieures à 150€ HT. • Notes < 25€ HT avec client non assujetti ==> Pas d'obligati"
+ },
+ {
+  "id": 29,
+  "titre": "Assujetti unique au sens de l’article 256 C du CGI",
+  "termes": [
+   "BG-11",
+   "BG-4",
+   "BG-5",
+   "BT-21",
+   "BT-22",
+   "BT-29",
+   "BT-29-1",
+   "BT-47",
+   "BT-48"
+  ],
+  "note": "Dans le cadre de la mise en conformité du groupe TVA en France avec la Directive TVA 2006/112/CE , un identifiant à la TVA de même qu’un SIREN seront créés pour l'assujetti unique qui devient seul redevable de la TVA pou"
+ },
+ {
+  "id": 30,
+  "titre": "TVA déjà collectée - Opérations traitées initialement en e-reporting B2C, faisant l’objet ",
+  "termes": [
+   "BT-23"
+  ],
+  "note": "Ce cas de gestion illustre la gestion des opérations entre assujettis soumises au e-invoicing qui ont été enregistrées dans un logiciel ou système de caisse (transaction B2C). Exemple : Un décorateur floral réalise à la "
+ },
+ {
+  "id": 31,
+  "titre": "Les factures « mixtes » mentionnant une opération principale et une opération accessoire",
+  "termes": [],
+  "note": "Exemple : Une boutique de vêtement propose indépendamment de la vente de ses produits, un service de retouche sur-mesure. • Si suite à sa vente, un produit doit être retouché, la retouche est considérée comme secondaire "
+ },
+ {
+  "id": 32,
+  "titre": "Les paiements mensuels",
+  "termes": [],
+  "note": "Exemple : Un fournisseur d’énergie propose à ses clients de mensualiser leurs paiements sur la base d’une estimation de leur consommation annuelle. A la fin de l’année, le fournisseur d’énergie émet une facture de régula"
+ },
+ {
+  "id": 33,
+  "titre": "Les opérations soumises au régime de la marge bénéficiaire",
+  "termes": [
+   "BT-109",
+   "BT-110",
+   "BT-116",
+   "BT-118",
+   "BT-121",
+   "BT-131",
+   "BT-146",
+   "BT-147",
+   "BT-148",
+   "BT-151"
+  ],
+  "note": "La TVA sur la marge n’est pas calculée sur le prix de vente, mais sur la différence entre le prix de vente et le prix d’achat. Le montant de la TVA sur la marge n'est pas porté sur la facture, ce qui pose une difficulté "
+ },
+ {
+  "id": 34,
+  "titre": "Gestion des encaissements partiels et annulations d’encaissements",
+  "termes": [],
+  "note": "Chaque encaissement partiel (ex : un acompte) doit être déclaré avec un flux cycle de vie portant le statut « encaissée ». Le champ « montant » portera le montant encaissé. En cas d’annulation d’encaissement après erreur"
+ },
+ {
+  "id": 35,
+  "titre": "Gestion des notes d’auteur",
+  "termes": [],
+  "note": "• Les relevés de droits n’entrent pas dans le champ du e-invoicing. • Les opérations donnant lieu à une retenue de la TVA par les éditeurs, les sociétés de perception et de répartition de droits et les producteurs entren"
+ },
+ {
+  "id": 36,
+  "titre": "Opérations soumises au secret professionnel et échanges de données sensibles",
+  "termes": [
+   "BT-153",
+   "BT-154"
+  ],
+  "note": "Afin de respecter les opérations soumises au secret professionnel (cf. article 226-13 du Code pénal - notamment secret bancaire article L. 511-33 du code monétaire et financier ou secret des affaires article L. 151-1 du "
+ },
+ {
+  "id": 37,
+  "titre": "Sociétés en participation",
+  "termes": [
+   "BT-10",
+   "BT-11",
+   "BT-13",
+   "BT-49"
+  ],
+  "note": "Pour réaliser certains projets pour un Acheteur final, plusieurs prestataires peuvent s’associer dans une réponse commune et constituer ainsi un Groupement Momentané d’Entreprises (GME). Celui-ci peut décider d’organiser"
+ },
+ {
+  "id": 38,
+  "titre": "Factures avec sous-lignes et regroupements de lignes",
+  "termes": [
+   "BT-126",
+   "BT-131",
+   "EXT-FR-FE-162",
+   "EXT-FR-FE-163"
+  ],
+  "note": "Dans certains secteurs, des articles composites nécessitent de décrire le détail de leur composition. Il peut s’agir par exemple : • De vente de kits qui rassemblent divers articles, comme un pack d’outils dont il convie"
+ },
+ {
+  "id": 39,
+  "titre": "Intermédiaire transparent regroupant des ventes de plusieurs Vendeurs pour un même acheteu",
+  "termes": [
+   "BG-4",
+   "BT-1",
+   "BT-109",
+   "BT-110",
+   "BT-111",
+   "BT-112",
+   "BT-116",
+   "BT-117",
+   "BT-118",
+   "BT-119",
+   "BT-120",
+   "BT-121",
+   "BT-128",
+   "BT-128-1",
+   "BT-131",
+   "BT-153",
+   "BT-2",
+   "BT-23",
+   "BT-27",
+   "BT-30",
+   "BT-40",
+   "BT-48",
+   "BT-8",
+   "EXT-FR-FE-163",
+   "EXT-FR-FE-164",
+   "EXT-FR-FE-167",
+   "EXT-FR-FE-168",
+   "EXT-FR-FE-177",
+   "EXT-FR-FE-178",
+   "EXT-FR-FE-180",
+   "EXT-FR-FE-181",
+   "EXT-FR-FE-182",
+   "EXT-FR-FE-184",
+   "EXT-FR-FE-BG-13"
+  ],
+  "note": "Dans certains cas d’usage, un intermédiaire intervient entre des VENDEURS et un ACHETEUR en jouant un rôle d’agrégation, comme s’il intervenait en intermédiaire opaque (achat de biens ou prestations à des Vendeurs et rev"
+ },
+ {
+  "id": 40,
+  "titre": "Paiements groupés, netting ou compensation en cas d’achat / vente croisés",
+  "termes": [
+   "BT-81"
+  ],
+  "note": "Dans certains secteurs, l’ACHETEUR peut être amené à facturer des services ou des biens à son VENDEUR, puis à déduire du paiement de ses factures d’achat les montants dus sur ses propres factures de ventes au VENDEUR. Ce"
+ },
+ {
+  "id": 41,
+  "titre": "Sociétés de Barter (troc interentreprises)",
+  "termes": [
+   "BT-112",
+   "BT-113",
+   "BT-115",
+   "BT-21",
+   "EXT-FR-FE-BG-02"
+  ],
+  "note": "Dans le secteur publicitaire, il existe des opérations où un annonceur vend des biens ou services en échange de prestations publicitaires à consommer dans les mois à venir. Cette pratique a vu apparaître des sociétés de "
+ },
+ {
+  "id": 42,
+  "titre": "Gestion de la détaxe",
+  "termes": [],
+  "note": "Lors d’une vente B2C, l’ACHETEUR non assujetti établi dans un pays tiers peut bénéficier d'une détaxe (le client), c’est à dire du remboursement de la TVA. Pour cela, le commerçant qui offre ce service doit remettre à l’"
+ },
+ {
+  "id": 43,
+  "titre": "E-reporting pour B2B international",
+  "termes": [],
+  "note": "Le cas d'usage décrit dans le document XP X12-014 décrit P146 : - Quelles sont les spécificités d’une facture B2B internationale par rapport à une facture B2B domestique - Les ventes B2B internationales - Les acquisition"
+ },
+ {
+  "id": 44,
+  "titre": "Transactions avec des entités établies dans les DROM / COM / TAAF",
+  "termes": [],
+  "note": "Les DROM (Départements et Régions d’Outre-Mer), les COM (Collectivités d’Outre-Mer) et les TAAF (Terres Australes et Antarctiques françaises se décomposent en 3 zones géographiques conduisant à 2 groupes du point de vue "
+ }
+]

@@ -1,0 +1,238 @@
+{
+  "name": "facture-schematron-validator",
+  "displayName": "Facture Schematron Validator (UBL / CII / Factur-X)",
+  "description": "Validation Schematron des factures électroniques UBL, CII et Factur-X (EN 16931, Peppol, règles françaises personnalisées) — pensé pour la réforme française de la facturation électronique.",
+  "version": "0.16.0",
+  "publisher": "votre-editeur",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "facture",
+    "e-invoicing",
+    "UBL",
+    "CII",
+    "Factur-X",
+    "EN16931",
+    "Schematron",
+    "Peppol"
+  ],
+  "activationEvents": [
+    "onLanguage:xml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "factureValidator.validate",
+        "title": "Facture: Valider (détection auto UBL / CII / Factur-X)",
+        "icon": "$(pass)"
+      },
+      {
+        "command": "factureValidator.clearDiagnostics",
+        "title": "Facture: Effacer les diagnostics"
+      },
+      {
+        "command": "factureValidator.annotateBt",
+        "title": "Facture: Annoter les balises en BT (commentaires)",
+        "icon": "$(tag)"
+      },
+      {
+        "command": "factureValidator.removeBtComments",
+        "title": "Facture: Supprimer les annotations BT",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "factureValidator.inventory",
+        "title": "Facture: Inventaire des termes (BT/BG/EXT)",
+        "icon": "$(list-tree)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "factureValidator.validate",
+          "when": "resourceExtname == .xml || resourceExtname == .pdf",
+          "group": "7_modification"
+        },
+        {
+          "command": "factureValidator.annotateBt",
+          "when": "resourceExtname == .xml",
+          "group": "7_modification"
+        },
+        {
+          "command": "factureValidator.removeBtComments",
+          "when": "resourceExtname == .xml",
+          "group": "7_modification"
+        },
+        {
+          "command": "factureValidator.inventory",
+          "when": "resourceExtname == .xml",
+          "group": "7_modification"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "factureValidator.validate",
+          "when": "resourceLangId == xml",
+          "group": "7_modification"
+        },
+        {
+          "command": "factureValidator.annotateBt",
+          "when": "resourceLangId == xml",
+          "group": "7_modification"
+        },
+        {
+          "command": "factureValidator.removeBtComments",
+          "when": "resourceLangId == xml",
+          "group": "7_modification"
+        },
+        {
+          "command": "factureValidator.inventory",
+          "when": "resourceLangId == xml",
+          "group": "7_modification"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "factureValidator.validate",
+          "when": "resourceLangId == xml",
+          "group": "navigation@1"
+        },
+        {
+          "command": "factureValidator.annotateBt",
+          "when": "resourceLangId == xml",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Facture Schematron Validator",
+      "properties": {
+        "factureValidator.javaPath": {
+          "type": "string",
+          "default": "java",
+          "description": "Chemin de l'exécutable Java (Java 11+ requis pour Saxon-HE)."
+        },
+        "factureValidator.rulesets.ubl": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "controles-plus",
+              "en16931",
+              "peppol",
+              "fr-ctc",
+              "extended-ctc-fr",
+              "en16931-cef"
+            ]
+          },
+          "default": [
+            "controles-plus",
+            "en16931",
+            "fr-ctc"
+          ],
+          "description": "Jeux de règles pour l'UBL. 'en16931' = profil EN 16931 version réforme FR (FNFE 1.4.0) ; 'fr-ctc' = règles françaises BR-FR-CTC (XP Z12-012) ; 'extended-ctc-fr' = profil étendu FR (à utiliser À LA PLACE de en16931) ; 'peppol' = Peppol BIS 3.0."
+        },
+        "factureValidator.rulesets.cii": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "controles-plus",
+              "en16931",
+              "fr-ctc",
+              "extended-ctc-fr",
+              "facturx-en16931",
+              "en16931-cef"
+            ]
+          },
+          "default": [
+            "controles-plus",
+            "en16931",
+            "fr-ctc"
+          ],
+          "description": "Jeux de règles pour le CII (y compris Factur-X). 'en16931' = profil EN 16931 version réforme FR ; 'fr-ctc' = règles françaises BR-FR-CTC ; 'extended-ctc-fr' = profil étendu FR (remplace en16931) ; 'facturx-en16931' = contrôles du profil Factur-X (listes de codes incluses)."
+        },
+        "factureValidator.customSchematronXslt": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Chemins absolus vers des Schematron compilés en XSLT (ex. règles françaises des spécifications externes AIFE/DGFiP). Appliqués en plus des jeux embarqués. Utilisez scripts/compile-schematron.sh pour compiler un .sch."
+        },
+        "factureValidator.validateOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Valider automatiquement les fichiers XML de facture à l'enregistrement."
+        },
+        "factureValidator.messageLanguage": {
+          "type": "string",
+          "enum": [
+            "fr",
+            "original"
+          ],
+          "default": "fr",
+          "description": "Langue des messages d'erreur. 'fr' traduit les règles EN 16931 en français (les règles BR-FR sont déjà en français) ; 'original' conserve les messages d'origine (anglais pour EN 16931/Peppol)."
+        },
+        "factureValidator.xsdValidation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Valider d'abord la structure du document contre les schémas XSD (UBL 2.1 / CII D16B) avant les règles Schematron."
+        },
+        "factureValidator.frSeverityProfile": {
+          "type": "string",
+          "enum": [
+            "strict",
+            "tolerant"
+          ],
+          "default": "strict",
+          "description": "Profil de sévérité des règles françaises BR-FR : 'strict' remonte les violations en erreurs (recommandé avant envoi), 'tolerant' en avertissements (utile en début de mise en conformité)."
+        },
+        "factureValidator.arithmeticTolerance": {
+          "type": "number",
+          "default": 0.0001,
+          "description": "Tolérance d'arrondi des contrôles arithmétiques complémentaires (PRIX-01, MONTANT-01). L'EN 16931 ne limite pas les décimales des prix unitaires : une comparaison stricte produirait des faux positifs."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "factureValidator",
+          "title": "Facture électronique",
+          "icon": "media/facture-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "factureValidator": [
+        {
+          "type": "webview",
+          "id": "factureValidator.panel",
+          "name": "Contrôles",
+          "icon": "media/facture-icon.svg"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  }
+}

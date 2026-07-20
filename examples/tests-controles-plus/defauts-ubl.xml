@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <cbc:ID>TEST-DEFAUTS-UBL</cbc:ID>
+  <cac:AccountingSupplierParty><cac:Party><cac:PartyLegalEntity>
+    <!-- ID-01 : SIREN 9 chiffres mais clé de Luhn fausse -->
+    <cbc:CompanyID schemeID="0002">123456789</cbc:CompanyID>
+  </cac:PartyLegalEntity></cac:Party></cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty><cac:Party><cac:PartyLegalEntity>
+    <!-- ID-01 : SIRET Luhn faux -->
+    <cbc:CompanyID schemeID="0009">12345678900011</cbc:CompanyID>
+  </cac:PartyLegalEntity></cac:Party></cac:AccountingCustomerParty>
+  <cac:LegalMonetaryTotal>
+    <!-- TECH-01 : valeur littérale null -->
+    <cbc:PayableAmount currencyID="EUR">null</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <!-- UNITE-01 : C62 vs HUR ; MONTANT-01 : 10 × 5 = 50, déclaré 45 -->
+    <cbc:InvoicedQuantity unitCode="C62">10</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">45.00</cbc:LineExtensionAmount>
+    <cac:Price>
+      <!-- PRIX-01 : 20 − 3 = 17 ≠ 5 ; PRIX-03 : quantité de base 0 exclue du calcul MONTANT -->
+      <cbc:PriceAmount currencyID="EUR">5.00</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="HUR">1</cbc:BaseQuantity>
+      <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+        <cbc:Amount currencyID="EUR">3.00</cbc:Amount>
+        <cbc:BaseAmount currencyID="EUR">20.00</cbc:BaseAmount>
+      </cac:AllowanceCharge>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="C62">2</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">16.00</cbc:LineExtensionAmount>
+    <cac:Price>
+      <!-- PRIX-02 : rabais négatif ; PRIX-04 : brut = net sans rabais effectif -->
+      <cbc:PriceAmount currencyID="EUR">8.00</cbc:PriceAmount>
+      <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+        <cbc:Amount currencyID="EUR">-2.00</cbc:Amount>
+        <cbc:BaseAmount currencyID="EUR">6.00</cbc:BaseAmount>
+      </cac:AllowanceCharge>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>3</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="C62">1</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">9.99</cbc:LineExtensionAmount>
+    <cac:Price>
+      <!-- PRIX-03 : quantité de base nulle -->
+      <cbc:PriceAmount currencyID="EUR">9.99</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="C62">0</cbc:BaseQuantity>
+      <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+        <cbc:Amount currencyID="EUR">0</cbc:Amount>
+        <cbc:BaseAmount currencyID="EUR">9.99</cbc:BaseAmount>
+      </cac:AllowanceCharge>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>
