@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 Questions et discussions
-    url: https://github.com/Yassin.xyz/facture-schematron-validator/discussions
+    url: https://github.com/Yassin-xyz/facture-schematron-validator/discussions
     about: Pour les questions d'usage et les échanges (activez l'onglet Discussions).
   - name: 🔒 Signaler une vulnérabilité
-    url: https://github.com/Yassin.xyz/facture-schematron-validator/security/advisories/new
+    url: https://github.com/Yassin-xyz/facture-schematron-validator/security/advisories/new
     about: Merci de signaler les failles de sécurité en privé (voir SECURITY.md).

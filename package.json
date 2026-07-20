@@ -10,12 +10,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yassin.xyz/facture-schematron-validator.git"
+    "url": "https://github.com/Yassin-xyz/facture-schematron-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/Yassin.xyz/facture-schematron-validator/issues"
+    "url": "https://github.com/Yassin-xyz/facture-schematron-validator/issues"
   },
-  "homepage": "https://github.com/Yassin.xyz/facture-schematron-validator#readme",
+  "homepage": "https://github.com/Yassin-xyz/facture-schematron-validator#readme",
   "engines": {
     "vscode": "^1.85.0"
   },

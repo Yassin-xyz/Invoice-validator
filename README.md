@@ -114,7 +114,7 @@ chemin via le paramètre `factureValidator.javaPath`.
 ### Option A — Depuis les sources (recommandé aujourd'hui)
 
 ```bash
-git clone https://github.com/Yassin.xyz/facture-schematron-validator.git
+git clone https://github.com/Yassin-xyz/facture-schematron-validator.git
 cd facture-schematron-validator
 npm install
 npm run compile

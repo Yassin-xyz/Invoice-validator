@@ -24,13 +24,13 @@ l'adresse indiquée dans ce document.
 
 ## Comment contribuer
 
-- **Signaler un bug** : ouvrez une [issue](https://github.com/Yassin.xyz/facture-schematron-validator/issues)
+- **Signaler un bug** : ouvrez une [issue](https://github.com/Yassin-xyz/facture-schematron-validator/issues)
   en utilisant le modèle « Rapport de bug ». Joignez si possible un extrait de
   facture minimal reproduisant le problème (anonymisé — voir la note de
   confidentialité ci-dessous).
 - **Proposer une fonctionnalité** : ouvrez une issue « Demande de fonctionnalité »
   décrivant le besoin et le cas d'usage métier.
-- **Poser une question** : utilisez l'onglet [Discussions](https://github.com/Yassin.xyz/facture-schematron-validator/discussions)
+- **Poser une question** : utilisez l'onglet [Discussions](https://github.com/Yassin-xyz/facture-schematron-validator/discussions)
   s'il est activé, sinon une issue.
 
 > ⚠️ **Confidentialité** : ne joignez jamais de facture réelle contenant des
@@ -46,7 +46,7 @@ Prérequis :
 - **VS Code 1.85+**.
 
 ```bash
-git clone https://github.com/Yassin.xyz/facture-schematron-validator.git
+git clone https://github.com/Yassin-xyz/facture-schematron-validator.git
 cd facture-schematron-validator
 npm install
 npm run compile
