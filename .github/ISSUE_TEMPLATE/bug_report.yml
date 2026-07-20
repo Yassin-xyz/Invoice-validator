@@ -1,0 +1,67 @@
+name: "🐞 Rapport de bug"
+description: Signaler un dysfonctionnement de l'extension
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler un bug.
+        ⚠️ **Ne joignez jamais de facture réelle** contenant des données
+        personnelles ou commerciales. Anonymisez, ou repartez des fichiers de
+        `examples/`.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du problème
+      description: Que se passe-t-il ? Qu'attendiez-vous à la place ?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Étapes de reproduction
+      description: Comment reproduire le problème, pas à pas.
+      placeholder: |
+        1. Ouvrir un fichier UBL
+        2. Lancer « Facture: Valider »
+        3. …
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format concerné
+      options:
+        - UBL 2.1
+        - CII
+        - Factur-X / ZUGFeRD (PDF)
+        - Autre / ne sais pas
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Extrait minimal (anonymisé)
+      description: Un extrait de facture reproduisant le problème, sans données réelles.
+      render: xml
+  - type: input
+    id: ext-version
+    attributes:
+      label: Version de l'extension
+      placeholder: "0.16.0"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environnement
+      description: Version de VS Code, de Java (`java -version`) et système d'exploitation.
+      placeholder: "VS Code 1.90 · Java 17 · Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Journaux / message d'erreur
+      description: Sortie de la console « Facture électronique » ou du canal de sortie, le cas échéant.
+      render: shell

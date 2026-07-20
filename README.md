@@ -1,117 +1,347 @@
-# Facture Schematron Validator — UBL / CII / Factur-X
+<div align="center">
 
-Extension VS Code de validation Schematron des factures électroniques, pensée
-pour la **réforme française de la facturation électronique**. Architecture
-inspirée de [xslt-transformer-vscode](https://github.com/vasilcinandrei/xslt-transformer-vscode)
-(détection de document → Saxon-HE → Schematron compilé en XSLT → rapport SVRL
-→ diagnostics VS Code), étendue aux trois formats du socle :
+# 🧾 Facture Schematron Validator
 
-| Format | Détection | Règles embarquées |
+**Validez vos factures électroniques UBL, CII et Factur-X directement dans VS Code —
+conformité EN 16931, Peppol et règles françaises de la réforme, avec des messages
+d'erreur en français.**
+
+[![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
+[![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85-007ACC.svg?logo=visualstudiocode)](https://code.visualstudio.com/)
+[![Version](https://img.shields.io/badge/version-0.16.0-informational.svg)](CHANGELOG.md)
+[![Règles FR](https://img.shields.io/badge/FNFE--MPE-v1.4.0-success.svg)](https://github.com/fnfempe/France_RFE)
+[![PRs bienvenues](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
+
+</div>
+
+---
+
+## 📖 Sommaire
+
+- [À quoi ça sert ?](#-à-quoi-ça-sert-)
+- [Fonctionnalités](#-fonctionnalités)
+- [Formats et règles pris en charge](#-formats-et-règles-pris-en-charge)
+- [Prérequis](#-prérequis)
+- [Installation](#-installation)
+- [Démarrage rapide](#-démarrage-rapide)
+- [Les commandes](#-les-commandes)
+- [Configuration](#-configuration)
+- [Comment ça marche](#-comment-ça-marche)
+- [Structure du projet](#-structure-du-projet)
+- [Mise à jour des règles officielles](#-mise-à-jour-des-règles-officielles)
+- [FAQ](#-faq)
+- [Limites et périmètre](#-limites-et-périmètre)
+- [Contribuer](#-contribuer)
+- [Licence et composants tiers](#-licence-et-composants-tiers)
+- [Avertissement](#-avertissement)
+
+---
+
+## 🎯 À quoi ça sert ?
+
+La **réforme française de la facturation électronique** impose des factures
+structurées conformes à la norme européenne **EN 16931** et à des règles
+nationales spécifiques. Avant d'envoyer une facture à une Plateforme Agréée (PA)
+ou au Portail Public de Facturation, encore faut-il qu'elle soit **valide**.
+
+**Facture Schematron Validator** est une extension VS Code qui vérifie vos
+factures **localement, sans rien envoyer sur Internet**, et vous pointe
+précisément chaque anomalie — avec des messages **en français** et l'identifiant
+de la règle violée (ex. `BR-CO-17`, `BR-FR-08`).
+
+Elle s'adresse aux **éditeurs de logiciels, intégrateurs, comptables, DSI et
+équipes conformité** qui préparent ou déboguent des flux de factures
+électroniques.
+
+> Architecture inspirée de
+> [xslt-transformer-vscode](https://github.com/vasilcinandrei/xslt-transformer-vscode)
+> (détection du document → Saxon-HE → Schematron compilé en XSLT → rapport SVRL →
+> diagnostics VS Code), étendue aux trois formats du socle de la réforme.
+
+---
+
+## ✨ Fonctionnalités
+
+- ✅ **Validation en 1 clic** de fichiers `.xml` (UBL / CII) et `.pdf` (Factur-X),
+  avec **détection automatique** du format.
+- 🇫🇷 **Messages en français** : ~1560 règles EN 16931 traduites (92 % de
+  couverture, dont **100 % des règles métier BR-\***). Commutable en anglais.
+- 🏛️ **Règles françaises officielles embarquées** : Schematron FNFE-MPE
+  **v1.4.0 du 30/06/2026** (BR-FR-CTC, profil étendu), en application de la norme
+  AFNOR **XP Z12-012**.
+- 🧱 **Validation en deux couches** : structure **XSD** (UBL 2.1 / CII D16B) puis
+  sémantique **Schematron** (EN 16931 + règles FR).
+- 📍 **Pointage précis** : chaque erreur se place sur la **balise exacte** désignée
+  par le XPath du rapport SVRL ; si la balise est absente, le message indique la
+  balise attendue.
+- 🧮 **Contrôles complémentaires** bi-syntaxe (cohérences arithmétiques, clé de
+  Luhn SIREN/SIRET…) absents des jeux standard.
+- 🏷️ **Annotation BT/BG/EXT** : commente chaque balise avec son terme métier
+  (483 entrées), pour lire une facture sans connaître la norme par cœur.
+- 📋 **Inventaire des termes** présents dans un document.
+- 🔒 **100 % local** : aucune donnée de facture n'est transmise sur le réseau.
+
+---
+
+## 📄 Formats et règles pris en charge
+
+| Format | Détection | Jeux de règles embarqués |
 |---|---|---|
-| **UBL 2.1** (Invoice, CreditNote…) | namespace OASIS | EN 16931 profil réforme FR, **BR-FR-CTC** (fr-ctc), EXTENDED-CTC-FR, Peppol BIS 3.0 |
-| **CII** (CrossIndustryInvoice) | namespace UN/CEFACT | EN 16931 profil réforme FR, **BR-FR-CTC** (fr-ctc), EXTENDED-CTC-FR, profil Factur-X |
-| **Factur-X / ZUGFeRD** (PDF hybride) | `%PDF` → extraction du XML embarqué via `pdf-lib`, puis validation comme du CII | idem CII |
+| **UBL 2.1** (Invoice, CreditNote…) | namespace OASIS | EN 16931 (profil réforme FR), **BR-FR-CTC**, EXTENDED-CTC-FR, Peppol BIS 3.0 |
+| **CII** (CrossIndustryInvoice) | namespace UN/CEFACT | EN 16931 (profil réforme FR), **BR-FR-CTC**, EXTENDED-CTC-FR, profil Factur-X |
+| **Factur-X / ZUGFeRD** (PDF hybride) | `%PDF` → extraction du XML embarqué (`pdf-lib`) puis validation comme du CII | idem CII |
 
-**Règles françaises officielles embarquées** : Schematron FNFE-MPE **v1.4.0 du 30/06/2026**
-(dépôt [fnfempe/France_RFE](https://github.com/fnfempe/France_RFE), tag `FNFE_RFE_INVOICE_1.4.0`),
-en application de la norme AFNOR **XP Z12-012**. Jeux activés par défaut : `en16931` + `fr-ctc`
-(erreurs et avertissements BR-FR). Le profil `extended-ctc-fr` s'utilise **à la place** de `en16931`.
-Ces normes évoluent (publications trimestrielles) : relancez `scripts/download-artifacts.sh` ou
-récupérez la nouvelle release FNFE pour rester à jour. La conformité ici ne vaut pas certification :
-la validation opposable reste celle de votre Plateforme Agréée.
+Jeux activés par défaut : `controles-plus` + `en16931` + `fr-ctc`. Le profil
+`extended-ctc-fr` s'utilise **à la place** de `en16931`.
 
-Les **règles françaises** (spécifications externes AIFE/DGFiP, profils
-Factur-X du FNFE-MPE…) s'ajoutent via `factureValidator.customSchematronXslt` —
-voir `validation-artifacts/schematron/fr/README.md`.
+---
 
-**Messages en français** : les ~1560 règles EN 16931 et syntaxiques sont traduites en français
-(catalogue `validation-artifacts/i18n/fr.json`, 92 % de couverture dont 100 % des règles métier BR-*).
-Les règles BR-FR du FNFE sont nativement en français. Paramètre `factureValidator.messageLanguage`
-(`fr` par défaut, `original` pour revenir à l'anglais). Traduction non officielle : en cas de doute,
-consultez le texte d'origine de la norme.
+## 🔧 Prérequis
 
-**Pointage précis des anomalies** : les diagnostics se placent sur la balise exacte désignée par
-le XPath du rapport SVRL (index positionnel du XML, résolution avec repli sur le parent). Quand
-l'élément est absent, le message indique la balise attendue grâce à la carte BT → balise
-(`validation-artifacts/i18n/bt-map.json`, 92 termes métier, libellés FR + balises UBL et CII).
-Pour les Factur-X, le XML extrait du PDF s'ouvre dans l'éditeur et reçoit les diagnostics.
+| Outil | Version | Rôle |
+|---|---|---|
+| **Java** | 11 ou supérieur, dans le `PATH` | Exécution de Saxon-HE (moteur XSLT 2.0) |
+| **VS Code** | 1.85 ou supérieur | Environnement hôte |
+| **Node.js** | 18 ou supérieur | Uniquement pour compiler depuis les sources |
 
-**Validation en couches** : depuis la v0.5.0, chaque validation exécute d'abord la **couche
-structurelle XSD** (UBL 2.1 officiel OASIS ; CII D16B officiel UN/CEFACT, via une classe Java
-précompilée, messages traduits et lignes exactes), puis la **couche sémantique Schematron**
-(EN 16931 + règles françaises). Désactivable via `factureValidator.xsdValidation`. Restent hors
-périmètre : la conformité PDF/A-3 du conteneur Factur-X (utiliser veraPDF), et les contrôles de
-plateforme (existence du SIREN à l'annuaire, doublons, cycle de vie) qui nécessitent le PPF/PA.
+Vérifiez Java avec `java -version`. Si Java n'est pas dans le `PATH`, indiquez son
+chemin via le paramètre `factureValidator.javaPath`.
 
-**Annotation BT pour consultants** : la commande *Facture: Annoter les balises en BT* insère devant
-chaque balise reconnue un commentaire `<!--@BT BT-x : libellé-->` (483 entrées cartographiées (termes BT, groupes BG et 211 termes étendus EXT-FR issus du dictionnaire officiel des spécifications externes Flux 1&2, avec rattachement BG), UBL et CII). La commande *Supprimer les annotations BT* retire uniquement ces marqueurs `@BT` — les
-commentaires d'origine du document sont préservés — et restitue le fichier à l'identique.
-L'opération est idempotente et annulable (Ctrl+Z), et une facture annotée reste valide XSD/Schematron.
+---
 
-**Contrôles complémentaires (jeu `controles-plus`, activé par défaut)** : cohérences arithmétiques
-et techniques bi-syntaxe absentes des jeux standard — TECH-01 (valeurs « null »/vides dans les montants,
-exécuté en premier pour éviter un rapport vide en cas de plantage moteur, avec reprise sur erreur par jeu),
-PRIX-01/02/03/04 (prix net = brut − rabais, rabais ≥ 0, quantité de base > 0, prix brut redondant),
-MONTANT-01 (montant HT de ligne recalculé), UNITE-01 (BT-130 vs BT-150), ID-01 (clé de Luhn SIREN/SIRET).
-Tolérance d'arrondi configurable (`arithmeticTolerance`, défaut 0.0001). Suppression automatique en
-présence des équivalents Peppol (R046, R121). Source : `schematron/custom-src/controles-plus.sch`,
-cas de test dans `examples/tests-controles-plus/`.
+## 📦 Installation
 
-## Prérequis
+### Option A — Depuis les sources (recommandé aujourd'hui)
 
-- **Java 11+** dans le PATH (ou configuré via `factureValidator.javaPath`) —
-  requis par Saxon-HE, qui exécute les Schematron compilés (XSLT 2.0).
-- Node.js 18+ pour compiler l'extension.
+```bash
+git clone https://github.com/Yassin.xyz/facture-schematron-validator.git
+cd facture-schematron-validator
+npm install
+npm run compile
+```
 
-## Démarrage
+Ouvrez le dossier dans VS Code et appuyez sur **F5** pour lancer un
+*Extension Development Host* avec l'extension chargée.
+
+### Option B — Générer un paquet `.vsix` installable
 
 ```bash
 npm install
-npm run compile
-# F5 dans VS Code pour lancer l'Extension Development Host
+npx @vscode/vsce package
+code --install-extension facture-schematron-validator-0.16.0.vsix
 ```
 
-Puis, sur un fichier `.xml` ou `.pdf` : clic droit → **Facture: Valider
-(détection auto UBL / CII / Factur-X)**, ou via la palette de commandes.
-Les erreurs apparaissent dans l'onglet **Problèmes**, avec l'identifiant de
-règle (ex. `BR-CO-17`, `BR-S-08`) et le jeu de règles source.
+### Option C — Marketplace VS Code
 
-## Structure
+> ℹ️ La publication sur le Marketplace est prévue. Une fois disponible, l'extension
+> s'installera directement depuis l'onglet Extensions de VS Code.
+
+---
+
+## 🚀 Démarrage rapide
+
+1. Ouvrez une facture `.xml` (UBL ou CII) ou un `.pdf` Factur-X.
+2. **Clic droit → « Facture: Valider (détection auto UBL / CII / Factur-X) »**
+   (ou via la palette de commandes, `Ctrl+Shift+P`).
+3. Les anomalies apparaissent dans l'onglet **Problèmes**, positionnées sur la
+   balise concernée, avec l'**identifiant de règle** (ex. `BR-CO-17`) et le **jeu
+   de règles source**.
+
+Essayez avec les fichiers fournis dans [`examples/`](examples/) :
+`exemple-ubl.xml`, `exemple-cii.xml`, `exemple-facturx.pdf`, et les cas
+conformes/non conformes de `examples/tests-controles-plus/`.
+
+---
+
+## ⌨️ Les commandes
+
+Accessibles via la palette (`Ctrl+Shift+P`), le menu contextuel ou la barre de
+titre de l'éditeur :
+
+| Commande | Effet |
+|---|---|
+| **Facture: Valider** | Détecte le format et valide (XSD + Schematron). |
+| **Facture: Effacer les diagnostics** | Retire les anomalies affichées. |
+| **Facture: Annoter les balises en BT** | Insère `<!--@BT BT-x : libellé-->` devant chaque balise reconnue. Idempotent, annulable (`Ctrl+Z`). |
+| **Facture: Supprimer les annotations BT** | Retire uniquement les marqueurs `@BT`, préserve les commentaires d'origine. |
+| **Facture: Inventaire des termes (BT/BG/EXT)** | Liste les termes métier présents dans le document. |
+
+---
+
+## ⚙️ Configuration
+
+Réglages disponibles dans les paramètres VS Code (préfixe `factureValidator.`) :
+
+| Paramètre | Défaut | Description |
+|---|---|---|
+| `javaPath` | `java` | Chemin de l'exécutable Java (11+). |
+| `rulesets.ubl` | `["controles-plus","en16931","fr-ctc"]` | Jeux de règles pour l'UBL. |
+| `rulesets.cii` | `["controles-plus","en16931","fr-ctc"]` | Jeux de règles pour le CII / Factur-X. |
+| `customSchematronXslt` | `[]` | Chemins absolus vers des Schematron compilés en XSLT (règles maison). |
+| `validateOnSave` | `false` | Valider automatiquement à l'enregistrement. |
+| `messageLanguage` | `fr` | `fr` (traduit) ou `original` (anglais EN 16931/Peppol). |
+| `xsdValidation` | `true` | Valider la structure XSD avant le Schematron. |
+| `frSeverityProfile` | `strict` | `strict` (violations FR en erreurs) ou `tolerant` (en avertissements). |
+| `arithmeticTolerance` | `0.0001` | Tolérance d'arrondi des contrôles arithmétiques. |
+
+**Jeux de règles disponibles** : `controles-plus`, `en16931`, `peppol` (UBL),
+`fr-ctc`, `extended-ctc-fr` (remplace `en16931`), `facturx-en16931` (CII),
+`en16931-cef`.
+
+**Ajouter vos propres règles françaises** (spécifications externes AIFE/DGFiP,
+profils Factur-X…) : compilez un `.sch` avec `scripts/compile-schematron.sh`, puis
+référencez le XSLT généré dans `customSchematronXslt`. Voir
+`validation-artifacts/schematron/fr/README.md`.
+
+---
+
+## 🔬 Comment ça marche
+
+```
+ Fichier (.xml / .pdf)
+        │
+        ▼
+ ┌──────────────┐   PDF ?   ┌──────────────────────┐
+ │  Détection   ├──────────►│ Extraction XML (pdf-lib) │
+ │  du format   │           └──────────┬───────────┘
+ └──────┬───────┘                      │
+        │ UBL / CII                    │ CII
+        ▼                              ▼
+ ┌─────────────────────────────────────────────┐
+ │  Couche 1 — XSD (structure)                  │  UBL 2.1 OASIS / CII D16B
+ └───────────────────┬─────────────────────────┘
+                     ▼
+ ┌─────────────────────────────────────────────┐
+ │  Couche 2 — Schematron (sémantique)          │  Saxon-HE exécute les XSLT
+ │  EN 16931 + BR-FR-CTC + controles-plus       │  compilés → rapport SVRL
+ └───────────────────┬─────────────────────────┘
+                     ▼
+ ┌─────────────────────────────────────────────┐
+ │  SVRL → diagnostics VS Code                  │  localisation par XPath,
+ │  (traduction FR, identifiant de règle)       │  message FR, onglet Problèmes
+ └─────────────────────────────────────────────┘
+```
+
+La couche XSD s'appuie sur une classe Java précompilée (messages traduits, lignes
+exactes). La couche Schematron utilise **Saxon-HE** pour exécuter les Schematron
+compilés en **XSLT 2.0**, qui produisent un rapport **SVRL** (Schematron
+Validation Report Language) transformé en diagnostics VS Code.
+
+---
+
+## 🗂️ Structure du projet
 
 ```
 src/
   extension.ts                  Point d'entrée, commandes, validate-on-save
-  commands/validateCommand.ts   Orchestration d'une validation
+  commands/                     Orchestration des commandes (valider, annoter, inventaire)
   detection/formatDetector.ts   UBL / CII / PDF Factur-X
-  facturx/extractFacturX.ts     Extraction du XML embarqué (pdf-lib, arbre EmbeddedFiles + /AF)
+  facturx/extractFacturX.ts     Extraction du XML embarqué dans le PDF
   validation/
     schematronValidator.ts      Résolution des jeux de règles + exécution Saxon
-    svrlParser.ts               Parsing du rapport SVRL (failed-assert / successful-report)
-    diagnostics.ts              SVRL → diagnostics VS Code (localisation heuristique par XPath)
-  utils/javaRunner.ts           Lancement de Saxon-HE
+    svrlParser.ts               Parsing du rapport SVRL
+    diagnostics.ts              SVRL → diagnostics VS Code
+    xsdValidator.ts             Couche structurelle XSD
+    xmlLocator.ts               Localisation d'une balise par XPath
+  annotation/btAnnotator.ts     Annotation des balises BT/BG/EXT
+  i18n/translator.ts            Traduction FR des messages
+  ui/panelView.ts               Panneau latéral « Facture électronique »
 scripts/
-  compile-schematron.sh         Compile un .sch en .xslt (squelette ISO embarqué) — pour les règles FR
-  download-artifacts.sh         Met à jour Saxon + Schematron EN16931/Peppol officiels
-tools/iso-schematron/           Squelette ISO Schematron (pipeline .sch → XSLT 2.0)
-validation-artifacts/schematron/
-  en16931-ubl/  en16931-cii/  peppol-ubl/   XSLT prêts à l'emploi
-  fr/                                        Vos règles françaises
+  compile-schematron.sh         Compile un .sch en .xslt (règles FR)
+  download-artifacts.sh         Met à jour Saxon + Schematron officiels
+tools/iso-schematron/           Squelette ISO Schematron (.sch → XSLT 2.0)
+validation-artifacts/
+  schematron/                   XSLT prêts à l'emploi (en16931, peppol, fr, controles-plus)
+  xsd/                          Schémas structurels UBL 2.1 / CII D16B
+  i18n/                         Traductions FR, carte BT → balise
 lib/saxon-he-10.9.jar           Moteur XSLT 2.0
+examples/                       Factures d'exemple (UBL, CII, Factur-X) + cas de test
 ```
 
-## Limites connues / pistes
+---
 
-- La localisation des erreurs dans l'éditeur est **heuristique** (le SVRL donne
-  un XPath, pas une ligne) ; pour une localisation exacte, brancher un parseur
-  XML avec suivi de position (ex. `sax` avec `position tracking`).
-- Pas encore de validation **XSD** (structurelle) : reprendre `XsdValidator.java`
-  du dépôt d'origine si besoin.
-- La conformité aux règles nationales ne vaut pas certification : la validation
-  finale reste celle de votre PDP.
+## 🔄 Mise à jour des règles officielles
 
-## Licences des artefacts
+Les normes EN 16931 et Peppol évoluent **trimestriellement**, et les règles
+françaises FNFE-MPE au fil des publications. Pour rester à jour :
 
-- Schematron EN 16931 : ConnectingEurope/eInvoicing-EN16931 (EUPL/Apache selon composants).
-- Règles Peppol : OpenPeppol.
-- Squelette ISO Schematron : licence permissive (voir en-têtes des fichiers).
-- Saxon-HE : Mozilla Public License 2.0.
+```bash
+scripts/download-artifacts.sh   # Saxon + Schematron EN 16931 / Peppol officiels
+```
+
+Pour les règles françaises, récupérez la nouvelle release du FNFE-MPE
+([fnfempe/France_RFE](https://github.com/fnfempe/France_RFE)) et recompilez.
+
+---
+
+## ❓ FAQ
+
+**Mes factures sont-elles envoyées quelque part ?**
+Non. Toute la validation est **locale** ; aucune donnée n'est transmise sur le
+réseau.
+
+**Une facture « valide » ici est-elle certifiée conforme ?**
+Non. La validation opposable reste celle de votre **Plateforme Agréée**. Cet outil
+vous aide à détecter les anomalies en amont, il ne remplace pas la PA.
+
+**Pourquoi Java est-il requis ?**
+Le moteur **Saxon-HE** (XSLT 2.0) qui exécute les Schematron est écrit en Java.
+C'est le seul prérequis externe.
+
+**Puis-je ajouter mes propres règles ?**
+Oui, via `factureValidator.customSchematronXslt` (voir
+[Configuration](#-configuration)).
+
+**La traduction française est-elle officielle ?**
+Non, c'est une traduction de courtoisie (couverture 92 %). En cas de doute,
+basculez sur `messageLanguage: original` et consultez le texte de la norme.
+
+**L'extension gère-t-elle la conformité PDF/A-3 du Factur-X ?**
+Non, c'est hors périmètre — utilisez [veraPDF](https://verapdf.org/) pour cela.
+
+---
+
+## 🚧 Limites et périmètre
+
+- La conformité aux règles nationales **ne vaut pas certification** : la validation
+  finale reste celle de votre Plateforme Agréée / PPF.
+- **Hors périmètre** : la conformité **PDF/A-3** du conteneur Factur-X (voir
+  veraPDF) et les **contrôles de plateforme** (existence du SIREN à l'annuaire,
+  doublons, cycle de vie) qui nécessitent le PPF/PA.
+- La traduction FR couvre 92 % des règles (100 % des règles métier BR-*) ; le
+  reste s'affiche en anglais.
+
+---
+
+## 🤝 Contribuer
+
+Les contributions sont les bienvenues — corrections de traduction, nouvelles
+règles, documentation, tests. Lisez d'abord le
+[guide de contribution](CONTRIBUTING.md) et le
+[code de conduite](CODE_OF_CONDUCT.md).
+
+⚠️ **Ne partagez jamais de facture réelle** contenant des données personnelles ou
+commerciales dans une issue ou une PR : anonymisez, ou repartez des exemples de
+`examples/`.
+
+Pour signaler une faille de sécurité, suivez la [politique de sécurité](SECURITY.md).
+
+---
+
+## 📜 Licence et composants tiers
+
+Le **code** de l'extension est distribué sous licence **[MIT](LICENSE)**.
+
+Les **artefacts de validation tiers** embarqués (Saxon-HE, Schematron EN 16931,
+règles Peppol, règles FNFE-MPE, schémas XSD OASIS/UN-CEFACT…) restent régis par
+leurs licences respectives — voir **[NOTICE.md](NOTICE.md)** pour le détail.
+
+---
+
+## ⚠️ Avertissement
+
+Ce logiciel est fourni « en l'état », sans garantie. Il constitue une **aide au
+contrôle**, pas un outil de certification. La conformité réglementaire de vos
+factures relève de votre responsabilité et de la validation par votre Plateforme
+Agréée. Les textes normatifs (EN 16931, XP Z12-012, spécifications AIFE/DGFiP)
+évoluent : vérifiez toujours la version en vigueur.

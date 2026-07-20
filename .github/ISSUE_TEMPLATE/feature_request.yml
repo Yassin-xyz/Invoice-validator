@@ -1,0 +1,39 @@
+name: "💡 Demande de fonctionnalité"
+description: Proposer une amélioration ou une nouvelle règle de validation
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Besoin / problème
+      description: Quel problème métier cette fonctionnalité résoudrait-elle ?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution envisagée
+      description: Décrivez le comportement souhaité.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type de demande
+      options:
+        - Nouvelle règle de validation (EN 16931 / FR / contrôle complémentaire)
+        - Correction / amélioration de traduction FR
+        - Nouveau format ou profil (Peppol, Factur-X, autre)
+        - Ergonomie / interface VS Code
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Référence normative
+      description: Article de l'EN 16931, règle BR-*, spécification AIFE/DGFiP… si applicable.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
