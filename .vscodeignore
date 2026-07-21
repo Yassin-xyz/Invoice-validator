@@ -4,3 +4,13 @@ node_modules/@types/**
 tsconfig.json
 **/*.map
 examples/**
+
+# Fichiers de développement / dépôt, inutiles dans le paquet publié
+.github/**
+.gitignore
+PUSH.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+scripts/**
+tools/**
+*.vsix
