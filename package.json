@@ -1,22 +1,22 @@
 {
-  "name": "facture-schematron-validator",
+  "name": "invoice-validator",
   "displayName": "Facture Schematron Validator (UBL / CII / Factur-X)",
   "description": "Validation Schematron des factures électroniques UBL, CII et Factur-X (EN 16931, Peppol, règles françaises personnalisées) — pensé pour la réforme française de la facturation électronique.",
   "version": "0.16.0",
-  "publisher": "Yassin-Yaou",
+  "publisher": "Invoicevalidator",
   "author": {
-    "name": "Yassin Yaou"
+    "name": "Yassin Y."
   },
   "license": "MIT",
   "icon": "media/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yassin-xyz/facture-schematron-validator.git"
+    "url": "https://github.com/Yassin-xyz/Invoice-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/Yassin-xyz/facture-schematron-validator/issues"
+    "url": "https://github.com/Yassin-xyz/Invoice-validator/issues"
   },
-  "homepage": "https://github.com/Yassin-xyz/facture-schematron-validator#readme",
+  "homepage": "https://github.com/Yassin-xyz/Invoice-validator#readme",
   "engines": {
     "vscode": "^1.85.0"
   },

@@ -45,5 +45,5 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 > dans `package.json`. Les prochaines versions seront détaillées incrément par
 > incrément.
 
-[Non publié]: https://github.com/Yassin-xyz/facture-schematron-validator/compare/v0.16.0...HEAD
-[0.16.0]: https://github.com/Yassin-xyz/facture-schematron-validator/releases/tag/v0.16.0
+[Non publié]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.16.0...HEAD
+[0.16.0]: https://github.com/Yassin-xyz/Invoice-validator/releases/tag/v0.16.0

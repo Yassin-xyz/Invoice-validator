@@ -114,8 +114,8 @@ chemin via le paramètre `factureValidator.javaPath`.
 ### Option A — Depuis les sources (recommandé aujourd'hui)
 
 ```bash
-git clone https://github.com/Yassin-xyz/facture-schematron-validator.git
-cd facture-schematron-validator
+git clone https://github.com/Yassin-xyz/Invoice-validator.git
+cd invoice-validator
 npm install
 npm run compile
 ```
@@ -128,7 +128,7 @@ Ouvrez le dossier dans VS Code et appuyez sur **F5** pour lancer un
 ```bash
 npm install
 npx @vscode/vsce package
-code --install-extension facture-schematron-validator-0.16.0.vsix
+code --install-extension invoice-validator-0.16.0.vsix
 ```
 
 ### Option C — Marketplace VS Code
