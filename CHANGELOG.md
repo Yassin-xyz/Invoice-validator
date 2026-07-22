@@ -13,7 +13,9 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 - Nom affiché de l'extension : **« Invoice-validator »** (auparavant
   « Invoice Validator — Factures électroniques UBL / CII / Factur-X »). Le titre
   des paramètres et la documentation suivent. Aucun changement fonctionnel ni
-  d'identifiant : les commandes et réglages (`factureValidator.*`) sont intacts.
+  d'identifiant de commande : les réglages (`factureValidator.*`) sont intacts.
+- Éditeur de publication : **`Yassin-Y`**. L'identifiant Marketplace devient donc
+  `Yassin-Y.invoice-validator`.
 
 ## [0.17.0] — 2026-07-22
 
