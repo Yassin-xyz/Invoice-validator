@@ -7,10 +7,18 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 
 ## [Non publié]
 
+## [0.17.1] — 2026-07-22
+
+### Modifié
+- Nom affiché de l'extension : **« Invoice-validator »** (auparavant
+  « Invoice Validator — Factures électroniques UBL / CII / Factur-X »). Le titre
+  des paramètres et la documentation suivent. Aucun changement fonctionnel ni
+  d'identifiant : les commandes et réglages (`factureValidator.*`) sont intacts.
+
 ## [0.17.0] — 2026-07-22
 
 ### Modifié
-- **L'extension s'appelle désormais « Invoice Validator »** : `displayName`,
+- **L'extension s'appelle désormais « Invoice-validator »** : `displayName`,
   titre des paramètres, README et documentation alignés. Les identifiants de
   commandes et de paramètres (`factureValidator.*`) sont inchangés — aucune
   configuration existante n'est perdue.
@@ -62,6 +70,7 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 > dans `package.json`. Les prochaines versions seront détaillées incrément par
 > incrément.
 
-[Non publié]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.17.0...HEAD
+[Non publié]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.17.1...HEAD
+[0.17.1]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.17.0...v0.17.1
 [0.17.0]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Yassin-xyz/Invoice-validator/releases/tag/v0.16.0
