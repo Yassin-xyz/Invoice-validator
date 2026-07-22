@@ -1,6 +1,6 @@
 # Composants tiers et licences (NOTICE)
 
-L'extension **Invoice-validator** est distribuée sous licence MIT
+L'extension **Invoice Validator RFE** est distribuée sous licence MIT
 (voir [`LICENSE`](LICENSE)). Elle embarque toutefois des artefacts de validation
 et un moteur d'exécution produits par des tiers, chacun régi par sa propre
 licence. Ces composants ne sont **pas** couverts par la licence MIT du projet.

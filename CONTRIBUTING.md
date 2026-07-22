@@ -1,4 +1,4 @@
-# Contribuer à Invoice-validator
+# Contribuer à Invoice Validator RFE
 
 Merci de l'intérêt que vous portez au projet ! Ce guide décrit comment proposer
 une amélioration, signaler un bug ou soumettre du code. Toute contribution —
@@ -47,7 +47,7 @@ Prérequis :
 
 ```bash
 git clone https://github.com/Yassin-xyz/Invoice-validator.git
-cd invoice-validator
+cd Invoice-validator
 npm install
 npm run compile
 ```

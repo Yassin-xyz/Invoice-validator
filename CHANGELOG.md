@@ -10,22 +10,22 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 ## [0.17.1] — 2026-07-22
 
 ### Modifié
-- Nom affiché de l'extension : **« Invoice-validator »** (auparavant
-  « Invoice Validator — Factures électroniques UBL / CII / Factur-X »). Le titre
-  des paramètres et la documentation suivent. Aucun changement fonctionnel ni
-  d'identifiant de commande : les réglages (`factureValidator.*`) sont intacts.
-- Éditeur de publication : **`Yassin-Y`**. L'identifiant Marketplace devient donc
-  `Yassin-Y.invoice-validator`.
+- **L'extension s'appelle désormais « Invoice Validator RFE »** (RFE : Réforme de
+  la Facturation Électronique). Le titre des paramètres et la documentation
+  suivent.
+- Identité de publication arrêtée : éditeur **`Yassin-Y`**, slug
+  **`invoice-validator-rfe`**, soit l'identifiant Marketplace
+  `Yassin-Y.invoice-validator-rfe`.
+- Aucun changement fonctionnel : les identifiants de commandes et de paramètres
+  (`factureValidator.*`) sont inchangés, aucune configuration n'est perdue.
 
 ## [0.17.0] — 2026-07-22
 
 ### Modifié
-- **L'extension s'appelle désormais « Invoice-validator »** : `displayName`,
-  titre des paramètres, README et documentation alignés. Les identifiants de
-  commandes et de paramètres (`factureValidator.*`) sont inchangés — aucune
-  configuration existante n'est perdue.
-- Identité de publication : éditeur `Invoicevalidator`, identifiant d'extension
-  `Invoicevalidator.invoice-validator`.
+- Renommage de l'extension en « Invoice Validator » : `displayName`, titre des
+  paramètres, README et documentation alignés. Les identifiants de commandes et
+  de paramètres (`factureValidator.*`) sont inchangés — aucune configuration
+  existante n'est perdue.
 
 ### Ajouté
 - **Icône de l'extension** (`media/icon.png`, 512×512) pour le Marketplace VS Code.

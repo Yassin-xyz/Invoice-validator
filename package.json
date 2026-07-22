@@ -1,6 +1,6 @@
 {
-  "name": "invoice-validator",
-  "displayName": "Invoice-validator",
+  "name": "invoice-validator-rfe",
+  "displayName": "Invoice Validator RFE",
   "description": "Validation Schematron des factures électroniques UBL, CII et Factur-X (EN 16931, Peppol, règles françaises personnalisées) — pensé pour la réforme française de la facturation électronique.",
   "version": "0.17.1",
   "publisher": "Yassin-Y",
@@ -124,7 +124,7 @@
       ]
     },
     "configuration": {
-      "title": "Invoice-validator",
+      "title": "Invoice Validator RFE",
       "properties": {
         "factureValidator.javaPath": {
           "type": "string",

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧾 Invoice-validator
+# 🧾 Invoice Validator RFE
 
 **Validez vos factures électroniques UBL, CII et Factur-X directement dans VS Code —
 conformité EN 16931, Peppol et règles françaises de la réforme, avec des messages
@@ -46,7 +46,7 @@ structurées conformes à la norme européenne **EN 16931** et à des règles
 nationales spécifiques. Avant d'envoyer une facture à une Plateforme Agréée (PA)
 ou au Portail Public de Facturation, encore faut-il qu'elle soit **valide**.
 
-**Invoice-validator** est une extension VS Code qui vérifie vos
+**Invoice Validator RFE** est une extension VS Code qui vérifie vos
 factures **localement, sans rien envoyer sur Internet**, et vous pointe
 précisément chaque anomalie — avec des messages **en français** et l'identifiant
 de la règle violée (ex. `BR-CO-17`, `BR-FR-08`).
@@ -117,7 +117,7 @@ chemin via le paramètre `factureValidator.javaPath`.
 
 ```bash
 git clone https://github.com/Yassin-xyz/Invoice-validator.git
-cd invoice-validator
+cd Invoice-validator
 npm install
 npm run compile
 ```
@@ -130,7 +130,7 @@ Ouvrez le dossier dans VS Code et appuyez sur **F5** pour lancer un
 ```bash
 npm install
 npx @vscode/vsce package
-code --install-extension invoice-validator-0.17.1.vsix
+code --install-extension invoice-validator-rfe-0.17.1.vsix
 ```
 
 ### Option C — Marketplace VS Code
