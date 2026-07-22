@@ -1,6 +1,6 @@
 {
   "name": "invoice-validator",
-  "displayName": "Facture Schematron Validator (UBL / CII / Factur-X)",
+  "displayName": "Invoice Validator — Factures électroniques UBL / CII / Factur-X",
   "description": "Validation Schematron des factures électroniques UBL, CII et Factur-X (EN 16931, Peppol, règles françaises personnalisées) — pensé pour la réforme française de la facturation électronique.",
   "version": "0.16.0",
   "publisher": "Invoicevalidator",
@@ -124,7 +124,7 @@
       ]
     },
     "configuration": {
-      "title": "Facture Schematron Validator",
+      "title": "Invoice Validator",
       "properties": {
         "factureValidator.javaPath": {
           "type": "string",

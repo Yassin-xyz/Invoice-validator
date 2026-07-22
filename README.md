@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧾 Facture Schematron Validator
+# 🧾 Invoice Validator
 
 **Validez vos factures électroniques UBL, CII et Factur-X directement dans VS Code —
 conformité EN 16931, Peppol et règles françaises de la réforme, avec des messages
@@ -11,6 +11,8 @@ d'erreur en français.**
 [![Version](https://img.shields.io/badge/version-0.16.0-informational.svg)](CHANGELOG.md)
 [![Règles FR](https://img.shields.io/badge/FNFE--MPE-v1.4.0-success.svg)](https://github.com/fnfempe/France_RFE)
 [![PRs bienvenues](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
+
+<sub>Créé et maintenu par **Yassin Y.** — logiciel libre sous licence MIT</sub>
 
 </div>
 
@@ -44,7 +46,7 @@ structurées conformes à la norme européenne **EN 16931** et à des règles
 nationales spécifiques. Avant d'envoyer une facture à une Plateforme Agréée (PA)
 ou au Portail Public de Facturation, encore faut-il qu'elle soit **valide**.
 
-**Facture Schematron Validator** est une extension VS Code qui vérifie vos
+**Invoice Validator** est une extension VS Code qui vérifie vos
 factures **localement, sans rien envoyer sur Internet**, et vous pointe
 précisément chaque anomalie — avec des messages **en français** et l'identifiant
 de la règle violée (ex. `BR-CO-17`, `BR-FR-08`).

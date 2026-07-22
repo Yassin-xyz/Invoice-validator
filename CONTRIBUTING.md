@@ -1,4 +1,4 @@
-# Contribuer à Facture Schematron Validator
+# Contribuer à Invoice Validator
 
 Merci de l'intérêt que vous portez au projet ! Ce guide décrit comment proposer
 une amélioration, signaler un bug ou soumettre du code. Toute contribution —
