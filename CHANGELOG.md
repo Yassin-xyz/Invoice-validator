@@ -7,13 +7,30 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 
 ## [Non publié]
 
+## [0.17.0] — 2026-07-22
+
+### Modifié
+- **L'extension s'appelle désormais « Invoice Validator »** : `displayName`,
+  titre des paramètres, README et documentation alignés. Les identifiants de
+  commandes et de paramètres (`factureValidator.*`) sont inchangés — aucune
+  configuration existante n'est perdue.
+- Identité de publication : éditeur `Invoicevalidator`, identifiant d'extension
+  `Invoicevalidator.invoice-validator`.
+
 ### Ajouté
-- Documentation de lancement open source : `LICENSE` (MIT), `NOTICE.md`,
-  `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, templates GitHub et CI.
+- **Icône de l'extension** (`media/icon.png`, 512×512) pour le Marketplace VS Code.
+- Documentation de lancement open source : `LICENSE` (MIT), `NOTICE.md`
+  (composants tiers et licences), `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
+  `SECURITY.md`, modèles d'issues et de pull request, intégration continue.
+- README réécrit pour le grand public : installation, démarrage rapide, tableau
+  des commandes, référence de configuration, FAQ, limites et périmètre.
 
 ### Corrigé
 - Suppression d'un dossier parasite (`{src…`) issu d'une expansion de shell.
-- Renseignement du champ `publisher` dans `package.json`.
+- `package-lock.json` resynchronisé sur la version réelle du paquet.
+- `.vscodeignore` : exclusion des fichiers de développement (`scripts/`,
+  `tools/`, `.github/`) du paquet publié, après vérification qu'ils ne sont pas
+  utilisés à l'exécution.
 
 ## [0.16.0] — 2026-07-20
 
@@ -45,5 +62,6 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 > dans `package.json`. Les prochaines versions seront détaillées incrément par
 > incrément.
 
-[Non publié]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.16.0...HEAD
+[Non publié]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.17.0...HEAD
+[0.17.0]: https://github.com/Yassin-xyz/Invoice-validator/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Yassin-xyz/Invoice-validator/releases/tag/v0.16.0

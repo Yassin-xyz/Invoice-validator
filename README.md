@@ -8,7 +8,7 @@ d'erreur en français.**
 
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85-007ACC.svg?logo=visualstudiocode)](https://code.visualstudio.com/)
-[![Version](https://img.shields.io/badge/version-0.16.0-informational.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.17.0-informational.svg)](CHANGELOG.md)
 [![Règles FR](https://img.shields.io/badge/FNFE--MPE-v1.4.0-success.svg)](https://github.com/fnfempe/France_RFE)
 [![PRs bienvenues](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
 
@@ -130,7 +130,7 @@ Ouvrez le dossier dans VS Code et appuyez sur **F5** pour lancer un
 ```bash
 npm install
 npx @vscode/vsce package
-code --install-extension invoice-validator-0.16.0.vsix
+code --install-extension invoice-validator-0.17.0.vsix
 ```
 
 ### Option C — Marketplace VS Code
