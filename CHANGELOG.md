@@ -7,6 +7,12 @@ et le projet suit le [versionnage sémantique](https://semver.org/lang/fr/).
 
 ## [Non publié]
 
+### Modifié
+- README : l'extension étant désormais publiée, l'installation depuis le
+  **Marketplace VS Code** devient la voie recommandée (les sources passent en
+  dernier, pour les contributeurs). Ajout du logo, des badges Marketplace
+  (version, installations) et du lien direct vers la page de l'extension.
+
 ## [0.17.1] — 2026-07-22
 
 ### Modifié

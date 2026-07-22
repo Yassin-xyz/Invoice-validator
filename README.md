@@ -1,16 +1,21 @@
 <div align="center">
 
-# 🧾 Invoice Validator RFE
+<img src="https://raw.githubusercontent.com/Yassin-xyz/Invoice-validator/main/media/icon.png" alt="Invoice Validator RFE" width="128">
+
+# Invoice Validator RFE
 
 **Validez vos factures électroniques UBL, CII et Factur-X directement dans VS Code —
 conformité EN 16931, Peppol et règles françaises de la réforme, avec des messages
 d'erreur en français.**
 
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/Yassin-Y.invoice-validator-rfe?label=Marketplace&logo=visualstudiocode&color=007ACC)](https://marketplace.visualstudio.com/items?itemName=Yassin-Y.invoice-validator-rfe)
+[![Installations](https://img.shields.io/visual-studio-marketplace/i/Yassin-Y.invoice-validator-rfe?label=installations)](https://marketplace.visualstudio.com/items?itemName=Yassin-Y.invoice-validator-rfe)
 [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85-007ACC.svg?logo=visualstudiocode)](https://code.visualstudio.com/)
-[![Version](https://img.shields.io/badge/version-0.17.1-informational.svg)](CHANGELOG.md)
 [![Règles FR](https://img.shields.io/badge/FNFE--MPE-v1.4.0-success.svg)](https://github.com/fnfempe/France_RFE)
 [![PRs bienvenues](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
+
+**[➜ Installer depuis le Marketplace VS Code](https://marketplace.visualstudio.com/items?itemName=Yassin-Y.invoice-validator-rfe)**
 
 <sub>Créé et maintenu par **Yassin Y.** — logiciel libre sous licence MIT</sub>
 
@@ -113,7 +118,35 @@ chemin via le paramètre `factureValidator.javaPath`.
 
 ## 📦 Installation
 
-### Option A — Depuis les sources (recommandé aujourd'hui)
+### Option A — Depuis le Marketplace VS Code (recommandé)
+
+Dans VS Code : onglet **Extensions** (`Ctrl+Shift+X`) → rechercher
+**« Invoice Validator RFE »** → *Installer*.
+
+Ou en ligne de commande :
+
+```bash
+code --install-extension Yassin-Y.invoice-validator-rfe
+```
+
+Page de l'extension :
+**[marketplace.visualstudio.com/items?itemName=Yassin-Y.invoice-validator-rfe](https://marketplace.visualstudio.com/items?itemName=Yassin-Y.invoice-validator-rfe)**
+
+> ⚠️ N'oubliez pas **Java 11+** (voir [Prérequis](#-prérequis)) : sans lui, le
+> moteur de validation ne démarre pas.
+
+### Option B — Depuis un paquet `.vsix`
+
+Téléchargez le `.vsix` de la [dernière release](https://github.com/Yassin-xyz/Invoice-validator/releases/latest),
+puis :
+
+```bash
+code --install-extension invoice-validator-rfe-0.17.1.vsix
+```
+
+Ou dans VS Code : palette de commandes → *Extensions: Install from VSIX…*
+
+### Option C — Depuis les sources (contributeurs)
 
 ```bash
 git clone https://github.com/Yassin-xyz/Invoice-validator.git
@@ -123,20 +156,8 @@ npm run compile
 ```
 
 Ouvrez le dossier dans VS Code et appuyez sur **F5** pour lancer un
-*Extension Development Host* avec l'extension chargée.
-
-### Option B — Générer un paquet `.vsix` installable
-
-```bash
-npm install
-npx @vscode/vsce package
-code --install-extension invoice-validator-rfe-0.17.1.vsix
-```
-
-### Option C — Marketplace VS Code
-
-> ℹ️ La publication sur le Marketplace est prévue. Une fois disponible, l'extension
-> s'installera directement depuis l'onglet Extensions de VS Code.
+*Extension Development Host* avec l'extension chargée. Pour générer un paquet :
+`npx @vscode/vsce package`.
 
 ---
 
